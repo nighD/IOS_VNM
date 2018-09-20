@@ -123,8 +123,8 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
             notification.alertBody = "Ding Dong"
             notification.fireDate = time
             notification.hasAction = true
-            notification.soundName = UILocalNotificationDefaultSoundName
-        //notification.soundName = UNNotificationSound.init(name: "Wrong.mp3")
+            notification.repeatInterval = NSCalendar.Unit.minute // Repeat every 1 mins
+            notification.soundName = "Apologize.mp3.mp3"
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
             UIApplication.shared.scheduledLocalNotifications?.append(notification)
         

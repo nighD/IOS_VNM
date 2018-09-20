@@ -21,6 +21,7 @@
 		BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */; };
 		BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */; };
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
+		BFA378C5215403E9008D3134 /* Apologize.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
 		BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615512149757300A56F25 /* WeekdaysVC.swift */; };
@@ -34,7 +35,7 @@
 		E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */; };
 		E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E248B1AF214515EC00CE00B3 /* NewPicture.swift */; };
 		E252064B214E891600AF9BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E252064A214E891600AF9BCE /* Main.storyboard */; };
-		FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */; };
+		FC68C23E2147AC8F00EAA7C4 /* Apologize.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
 		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
 /* End PBXBuildFile section */
@@ -77,6 +78,7 @@
 		BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMethodAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
+		BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Apologize.mp3.mp3; path = ../../../../../Downloads/Apologize.mp3.mp3; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		BFD615512149757300A56F25 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 		E248B1A72144D9F800CE00B3 /* imageUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageUICollectionViewCell.swift; sourceTree = "<group>"; };
 		E248B1AF214515EC00CE00B3 /* NewPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPicture.swift; sourceTree = "<group>"; };
 		E252064A214E891600AF9BCE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Apologize - One Republic.mp3"; sourceTree = "<group>"; };
+		FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Apologize.mp3; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
 		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,11 +252,12 @@
 		BFD6155B21497C7400A56F25 /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */,
 				BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */,
 				BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */,
 				FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */,
 				FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */,
-				FC68C23D2147AC8D00EAA7C4 /* Apologize - One Republic.mp3 */,
+				FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -374,10 +377,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */,
+				BFA378C5215403E9008D3134 /* Apologize.mp3.mp3 in Resources */,
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
 				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
 				E252064B214E891600AF9BCE /* Main.storyboard in Resources */,
-				FC68C23E2147AC8F00EAA7C4 /* Apologize - One Republic.mp3 in Resources */,
+				FC68C23E2147AC8F00EAA7C4 /* Apologize.mp3 in Resources */,
 				BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,
 				FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */,
