@@ -11,7 +11,7 @@ import AVFoundation
 import Foundation
 
 var soundList = ["Let her go - The Passenger", "Thinking out loud - Ed Sheeran", "Apologize - One Republic"]
-var indexOfCell = 0
+var indexOfCell = -1
 var player: AVAudioPlayer = AVAudioPlayer()
 
 class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {

@@ -34,7 +34,13 @@ class SetTimeAlarmVC: UIViewController, UITextFieldDelegate, AVAudioPlayerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alarmLbl.delegate = self
-        soundName.text = "None"
+        //soundName.text = "None"
+        if(indexOfCell == -1){
+            soundName.text = "None"
+        }
+        else {
+            soundName.text = soundList[indexOfCell]
+        }
         // set minimum date/time for picker
         timePicker.minimumDate = NSDate() as Date
         timePicker.locale = NSLocale.current
