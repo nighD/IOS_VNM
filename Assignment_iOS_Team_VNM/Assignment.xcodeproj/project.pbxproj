@@ -8,7 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */; };
-		BF42B828214CBAC700620BC1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B827214CBAC700620BC1 /* Line.swift */; };
+		BF1DE8B5215AA8B9003D22A0 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */; };
+		BF1DE8B7215AA8D6003D22A0 /* PropertyReflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */; };
+		BF1DE8B9215AA90A003D22A0 /* SoundDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */; };
+		BF1DE8BB215AA926003D22A0 /* AlarmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */; };
+		BF1DE8BD215AA952003D22A0 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */; };
+		BF1DE8BF215AA9C4003D22A0 /* AlarmSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */; };
+		BF1DE8C1215AAA32003D22A0 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C0215AAA32003D22A0 /* Identifier.swift */; };
+		BF1DE8C3215AAAF1003D22A0 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */; };
+		BF1DE8C5215AAB1B003D22A0 /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */; };
+		BF1DE8C7215AB707003D22A0 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C6215AB707003D22A0 /* WeekdaysVC.swift */; };
+		BF1DE8CA215ABC8E003D22A0 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8C8215ABC8E003D22A0 /* bell.mp3 */; };
+		BF1DE8CB215ABC8E003D22A0 /* tickle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF1DE8C9215ABC8E003D22A0 /* tickle.mp3 */; };
 		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */; };
 		BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */; };
@@ -25,11 +36,8 @@
 		BF7C8B71215A0F5F00636576 /* AlarmNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */; };
 		BFA378C5215403E9008D3134 /* Apologize.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
-		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
-		BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615512149757300A56F25 /* WeekdaysVC.swift */; };
 		BFD61554214975D000A56F25 /* DayServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD61553214975D000A56F25 /* DayServices.swift */; };
 		BFD61556214975F400A56F25 /* Weekdays.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD61555214975F400A56F25 /* Weekdays.swift */; };
-		BFD615582149761600A56F25 /* WeekdaysCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615572149761600A56F25 /* WeekdaysCell.swift */; };
 		BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD615592149768200A56F25 /* SoundBrowsingVC.swift */; };
 		E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */; };
 		E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */; };
@@ -61,7 +69,18 @@
 
 /* Begin PBXFileReference section */
 		BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
-		BF42B827214CBAC700620BC1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyReflect.swift; sourceTree = "<group>"; };
+		BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDelegate.swift; sourceTree = "<group>"; };
+		BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDelegate.swift; sourceTree = "<group>"; };
+		BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSet.swift; sourceTree = "<group>"; };
+		BF1DE8C0215AAA32003D22A0 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
+		BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
+		BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		BF1DE8C6215AB707003D22A0 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
+		BF1DE8C8215ABC8E003D22A0 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bell.mp3; path = "../../../../Downloads/Alarm-ios-swift-swift-4.0/IOS/Alarm/bell.mp3"; sourceTree = "<group>"; };
+		BF1DE8C9215ABC8E003D22A0 /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tickle.mp3; path = "../../../../Downloads/Alarm-ios-swift-swift-4.0/IOS/Alarm/tickle.mp3"; sourceTree = "<group>"; };
 		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
@@ -84,11 +103,8 @@
 		BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNameVC.swift; sourceTree = "<group>"; };
 		BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Apologize.mp3.mp3; path = ../../../../../Downloads/Apologize.mp3.mp3; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
-		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
-		BFD615512149757300A56F25 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
 		BFD61553214975D000A56F25 /* DayServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayServices.swift; sourceTree = "<group>"; };
 		BFD61555214975F400A56F25 /* Weekdays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekdays.swift; sourceTree = "<group>"; };
-		BFD615572149761600A56F25 /* WeekdaysCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysCell.swift; sourceTree = "<group>"; };
 		BFD615592149768200A56F25 /* SoundBrowsingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBrowsingVC.swift; sourceTree = "<group>"; };
 		E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCellTableViewCell.swift; sourceTree = "<group>"; };
 		E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,12 +150,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BF5771C5214A3C3F00499CB2 /* App */ = {
+		BF1DE8B3215AA89B003D22A0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
+				BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */,
+				BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */,
+				BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */,
+				BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */,
 			);
-			path = App;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		BF661E54212BA61200D7B6BF = {
@@ -166,17 +185,20 @@
 		BF661E5F212BA61200D7B6BF /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				BF1DE8C8215ABC8E003D22A0 /* bell.mp3 */,
+				BF1DE8C9215ABC8E003D22A0 /* tickle.mp3 */,
+				BF1DE8B3215AA89B003D22A0 /* Protocol */,
 				BF9B6929214B63FF00824E93 /* Function */,
-				BF5771C5214A3C3F00499CB2 /* App */,
 				BFD6155B21497C7400A56F25 /* Sound */,
 				BFAF072221467AAE00D42EA8 /* Model */,
 				BFAF071F21467A9400D42EA8 /* Services */,
-				BFAF07072144254F00D42EA8 /* Persistent Data */,
 				BF19253921420299003FBA55 /* View */,
 				BF661E95212BAB1100D7B6BF /* Controller */,
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
+				BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */,
+				BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -213,10 +235,10 @@
 				E248B1AF214515EC00CE00B3 /* NewPicture.swift */,
 				E2367E4C2147867900EC3B4A /* tableViewCellTableViewCell.swift */,
 				E2367E4E2148037500EC3B4A /* alarmTableViewCell.swift */,
-				BFD615512149757300A56F25 /* WeekdaysVC.swift */,
 				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
 				BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */,
 				BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */,
+				BF1DE8C6215AB707003D22A0 /* WeekdaysVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -224,18 +246,11 @@
 		BF9B6929214B63FF00824E93 /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				BFD615572149761600A56F25 /* WeekdaysCell.swift */,
-				BF42B827214CBAC700620BC1 /* Line.swift */,
+				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
+				BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */,
+				BF1DE8C0215AAA32003D22A0 /* Identifier.swift */,
 			);
 			path = Function;
-			sourceTree = "<group>";
-		};
-		BFAF07072144254F00D42EA8 /* Persistent Data */ = {
-			isa = PBXGroup;
-			children = (
-				BFAF07082144256700D42EA8 /* Alarm.swift */,
-			);
-			path = "Persistent Data";
 			sourceTree = "<group>";
 		};
 		BFAF071F21467A9400D42EA8 /* Services */ = {
@@ -251,6 +266,7 @@
 			children = (
 				BFD61555214975F400A56F25 /* Weekdays.swift */,
 				BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */,
+				BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -383,7 +399,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */,
+				BF1DE8CA215ABC8E003D22A0 /* bell.mp3 in Resources */,
 				BFA378C5215403E9008D3134 /* Apologize.mp3.mp3 in Resources */,
+				BF1DE8CB215ABC8E003D22A0 /* tickle.mp3 in Resources */,
 				BF661E6B212BA61200D7B6BF /* LaunchScreen.storyboard in Resources */,
 				FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */,
 				E252064B214E891600AF9BCE /* Main.storyboard in Resources */,
@@ -415,23 +433,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFD615582149761600A56F25 /* WeekdaysCell.swift in Sources */,
+				BF1DE8B9215AA90A003D22A0 /* SoundDelegate.swift in Sources */,
 				E2485DB52142019F00EAE371 /* AlarmPIC.swift in Sources */,
-				BFD615522149757300A56F25 /* WeekdaysVC.swift in Sources */,
 				E248B1B0214515EC00CE00B3 /* NewPicture.swift in Sources */,
+				BF1DE8B5215AA8B9003D22A0 /* Persistable.swift in Sources */,
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
+				BF1DE8BF215AA9C4003D22A0 /* AlarmSet.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
+				BF1DE8C3215AAAF1003D22A0 /* UIWindow+Extension.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
+				BF1DE8C7215AB707003D22A0 /* WeekdaysVC.swift in Sources */,
+				BF1DE8C1215AAA32003D22A0 /* Identifier.swift in Sources */,
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
-				BF42B828214CBAC700620BC1 /* Line.swift in Sources */,
+				BF1DE8BB215AA926003D22A0 /* AlarmDelegate.swift in Sources */,
 				E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */,
 				BF7C8B71215A0F5F00636576 /* AlarmNameVC.swift in Sources */,
+				BF1DE8BD215AA952003D22A0 /* AlarmModel.swift in Sources */,
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */,
+				BF1DE8C5215AAB1B003D22A0 /* NotificationName+Extension.swift in Sources */,
 				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
 				BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
-				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
+				BF1DE8B7215AA8D6003D22A0 /* PropertyReflect.swift in Sources */,
 				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */,

@@ -9,23 +9,23 @@
 import UIKit
 
 class AlarmNameVC: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var labelTextField: UITextField!
     var label: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textField.becomeFirstResponder()
+        labelTextField.becomeFirstResponder()
         // Do any additional setup after loading the view.
+        self.labelTextField.delegate = self
         
-        self.textField.delegate = self
+        labelTextField.text = label
         
-        textField.text = label
-        
-        textField.returnKeyType = UIReturnKeyType.done
-        textField.enablesReturnKeyAutomatically = true
+        //defined in UITextInputTraits protocol
+        labelTextField.returnKeyType = UIReturnKeyType.done
+        labelTextField.enablesReturnKeyAutomatically = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,11 +33,10 @@ class AlarmNameVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         label = textField.text!
-        performSegue(withIdentifier: "nameUnwindSegue", sender: self)
+        performSegue(withIdentifier: Id.labelUnwindIdentifier, sender: self)
         //This method can be used when no state passing is needed
         //navigationController?.popViewController(animated: true)
         return false
     }
     
-
 }

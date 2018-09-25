@@ -2,97 +2,78 @@
 //  WeekdaysVC.swift
 //  Assignment
 //
-//  Created by Cooldown on 10/9/18.
+//  Created by Cooldown on 26/9/18.
 //  Copyright © 2018 Cooldown. All rights reserved.
 //
 
 import UIKit
 
-class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WeekdaysVC: UITableViewController {
     
-    @IBOutlet weak var weeksdayTable: UITableView!
-    
-    var setTimeAlarmVC: SetTimeAlarmVC!
-    
-    var storedDay: [Int] = []
+    var weekdays: [Int]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        weeksdayTable.dataSource = self
-        weeksdayTable.delegate = self
-        
-        // Select multiple days
-        weeksdayTable.allowsMultipleSelection = true
-        weeksdayTable.accessibilityIdentifier = "weeksdayTable"
-        //weeksdayTable.identi
-        
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        performSegue(withIdentifier: Id.weekdaysUnwindIdentifier, sender: self)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DayServices.instance.getWeekdays().count
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = super.tableView(tableView, cellForRowAt: indexPath)
+        
+        for weekday in weekdays
+        {
+            if weekday == (indexPath.row + 1) {
+                cell.accessoryType = UITableViewCellAccessoryType.checkmark
+            }
+        }
+        return cell
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "WeekdaysCell") as? WeekdaysCell {
-            let weeksday = DayServices.instance.getWeekdays()[indexPath.row]
-            cell.updateViews(days: weeksday)
-            return cell
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        
+        if let index = weekdays.index(of: (indexPath.row + 1)){
+            weekdays.remove(at: index)
+            cell.setSelected(true, animated: true)
+            cell.setSelected(false, animated: true)
+            cell.accessoryType = UITableViewCellAccessoryType.none
         }
-        else {
-            return WeekdaysCell()
+        else{
+            //row index start from 0, weekdays index start from 1 (Sunday), so plus 1
+            weekdays.append(indexPath.row + 1)
+            cell.setSelected(true, animated: true)
+            cell.setSelected(false, animated: true)
+            cell.accessoryType = UITableViewCellAccessoryType.checkmark
+            
+        }
+    }
+}
+
+
+extension WeekdaysVC {
+    static func repeatText(weekdays: [Int]) -> String {
+        if weekdays.count == 7 {
+            return "Every day"
         }
         
-    }
-    
-    
-    
-    // Func to set checkmark
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            if cell.isSelected {
-                cell.accessoryType = .checkmark
-                storedDay.append(indexPath.row + 1)
-                
-                print(storedDay)
-            }
+        if weekdays.isEmpty {
+            return "Never"
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) {
-            cell.accessoryType = .none
-            if let index = storedDay.index(of: indexPath.row) {
-                storedDay.remove(at: index + 1)
-            }
-        }
-    }
-    
-//    @IBAction func done(_ sender: UIBarButtonItem) {
-//        setTimeAlarmVC.repeatDaysLabel.text = WeekdaysVC.repeatText(storedDay: storedDay)
-//        setTimeAlarmVC.repeatDay = storedDay
-//        if storedDay.count == 7 {
-//            setTimeAlarmVC.repeatDaysLabel.text = "Every day"
-//        }
-//        else if storedDay.isEmpty {
-//            setTimeAlarmVC.repeatDaysLabel.text = "Never"
-//        }
-//        
-//        self.navigationController?.popViewController(animated: true)
-//    }
-}
-extension WeekdaysVC {
-   static func repeatText(storedDay: [Int]) -> String {
+        
         var ret = String()
         var weekdaysSorted:[Int] = [Int]()
         
-        weekdaysSorted = storedDay.sorted(by: <)
+        weekdaysSorted = weekdays.sorted(by: <)
+        
         for day in weekdaysSorted {
             switch day{
             case 1:
@@ -104,12 +85,13 @@ extension WeekdaysVC {
             case 4:
                 ret += "Wed "
             case 5:
-                ret += "Thur "
+                ret += "Thu "
             case 6:
                 ret += "Fri "
             case 7:
                 ret += "Sat "
             default:
+                //throw
                 break
             }
         }
