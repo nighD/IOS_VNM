@@ -23,10 +23,11 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         // Select multiple days
         weeksdayTable.allowsMultipleSelection = true
-         weeksdayTable.accessibilityIdentifier = "weeksdayTable"
+        weeksdayTable.accessibilityIdentifier = "weeksdayTable"
         //weeksdayTable.identi
         
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,7 +60,7 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cell.accessoryType = .checkmark
                 storedDay.append(indexPath.row + 1)
                 
-                                print(storedDay)
+                print(storedDay)
             }
         }
     }
@@ -73,20 +74,21 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    @IBAction func done(_ sender: UIBarButtonItem) {
-        setTimeAlarmVC.repeatDaysLabel.text = repeatText(storedDay: storedDay)
-        setTimeAlarmVC.repeatDay = storedDay
-        if storedDay.count == 7 {
-            setTimeAlarmVC.repeatDaysLabel.text = "Every day"
-        }
-        else if storedDay.isEmpty {
-            setTimeAlarmVC.repeatDaysLabel.text = "Never"
-        }
-        
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    func repeatText(storedDay: [Int]) -> String {
+//    @IBAction func done(_ sender: UIBarButtonItem) {
+//        setTimeAlarmVC.repeatDaysLabel.text = WeekdaysVC.repeatText(storedDay: storedDay)
+//        setTimeAlarmVC.repeatDay = storedDay
+//        if storedDay.count == 7 {
+//            setTimeAlarmVC.repeatDaysLabel.text = "Every day"
+//        }
+//        else if storedDay.isEmpty {
+//            setTimeAlarmVC.repeatDaysLabel.text = "Never"
+//        }
+//        
+//        self.navigationController?.popViewController(animated: true)
+//    }
+}
+extension WeekdaysVC {
+   static func repeatText(storedDay: [Int]) -> String {
         var ret = String()
         var weekdaysSorted:[Int] = [Int]()
         
@@ -113,6 +115,4 @@ class WeekdaysVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         return ret
     }
-    
-    
 }

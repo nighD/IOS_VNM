@@ -23,7 +23,7 @@ class SoundBrowsingVC: UITableViewController, AVAudioPlayerDelegate {
         performSegue(withIdentifier: "segueOfSound", sender: self)
     }
     @IBAction func abortSelecting(_ sender: Any) {
-        player.stop()
+      //  player.stop()
         dismiss(animated: true, completion: nil)
         
     }

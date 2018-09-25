@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */; };
 		BF42B828214CBAC700620BC1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B827214CBAC700620BC1 /* Line.swift */; };
 		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */; };
@@ -21,6 +22,7 @@
 		BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */; };
 		BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */; };
 		BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF661EA2212BB9CD00D7B6BF /* MathVC.swift */; };
+		BF7C8B71215A0F5F00636576 /* AlarmNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */; };
 		BFA378C5215403E9008D3134 /* Apologize.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */; };
 		BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF0705214424FE00D42EA8 /* AlarmVC.swift */; };
 		BFAF07092144256700D42EA8 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF07082144256700D42EA8 /* Alarm.swift */; };
@@ -58,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
 		BF42B827214CBAC700620BC1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		BF661E9E212BAFE700D7B6BF /* SetTimeAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTimeAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA0212BB00800D7B6BF /* SetMethodAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetMethodAlarmVC.swift; sourceTree = "<group>"; };
 		BF661EA2212BB9CD00D7B6BF /* MathVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathVC.swift; sourceTree = "<group>"; };
+		BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmNameVC.swift; sourceTree = "<group>"; };
 		BFA378C4215403E9008D3134 /* Apologize.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Apologize.mp3.mp3; path = ../../../../../Downloads/Apologize.mp3.mp3; sourceTree = "<group>"; };
 		BFAF0705214424FE00D42EA8 /* AlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmVC.swift; sourceTree = "<group>"; };
 		BFAF07082144256700D42EA8 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
@@ -212,6 +216,7 @@
 				BFD615512149757300A56F25 /* WeekdaysVC.swift */,
 				BFD615592149768200A56F25 /* SoundBrowsingVC.swift */,
 				BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */,
+				BF7C8B70215A0F5F00636576 /* AlarmNameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD61555214975F400A56F25 /* Weekdays.swift */,
+				BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				BF661E9D212BADD700D7B6BF /* NoteVC.swift in Sources */,
 				BF42B828214CBAC700620BC1 /* Line.swift in Sources */,
 				E2367E4F2148037500EC3B4A /* alarmTableViewCell.swift in Sources */,
+				BF7C8B71215A0F5F00636576 /* AlarmNameVC.swift in Sources */,
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */,
 				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
@@ -427,6 +434,7 @@
 				BFAF07092144256700D42EA8 /* Alarm.swift in Sources */,
 				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
+				BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 				E248B1A82144D9F800CE00B3 /* imageUICollectionViewCell.swift in Sources */,
 			);

@@ -57,7 +57,7 @@ class Line: UIView {
         
     }
     override func draw(_ rect: CGRect) {
-        graph()
+       // graph()
     }
     
     
