@@ -64,7 +64,7 @@ class AlarmVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isEditing {
-            performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled))
+            performSegue(withIdentifier: Id.editSegueIdentifier, sender: SegueInfo(curCellIndex: indexPath.row, isEditMode: true, label: alarmModel.alarms[indexPath.row].label, mediaLabel: alarmModel.alarms[indexPath.row].mediaLabel, mediaID: alarmModel.alarms[indexPath.row].mediaID, repeatWeekdays: alarmModel.alarms[indexPath.row].repeatWeekdays, enabled: alarmModel.alarms[indexPath.row].enabled, snoozeEnabled: alarmModel.alarms[indexPath.row].snoozeEnabled))
         }
     }
     
@@ -153,7 +153,7 @@ class AlarmVC: UITableViewController {
         let addEditController = dist.topViewController as! SetTimeAlarmVC
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
-            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "bell", mediaID: "", repeatWeekdays: [], enabled: false)
+            addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "bell", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false)
         }
         else if segue.identifier == Id.editSegueIdentifier {
             addEditController.navigationItem.title = "Edit Alarm"
@@ -166,6 +166,8 @@ class AlarmVC: UITableViewController {
     }
     
     public func changeSwitchButtonState(index: Int) {
+        //let info = notification.userInfo as! [String: AnyObject]
+        //let index: Int = info["index"] as! Int
         alarmModel = Alarms()
         if alarmModel.alarms[index].repeatWeekdays.isEmpty {
             alarmModel.alarms[index].enabled = false
@@ -183,6 +185,5 @@ class AlarmVC: UITableViewController {
             }
         }
     }
-    
 }
 

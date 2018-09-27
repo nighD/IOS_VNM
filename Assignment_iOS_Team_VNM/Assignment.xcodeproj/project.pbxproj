@@ -230,11 +230,11 @@
 		BF9B6929214B63FF00824E93 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */,
 				BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */,
 				BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */,
 				BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */,
-				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */,
 				BF1DE8C0215AAA32003D22A0 /* Identifier.swift */,
 			);
