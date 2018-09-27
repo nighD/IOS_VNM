@@ -25,10 +25,9 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! tableViewCellTableViewCell
-        //cell.button.setImage(method[indexPath.item], for: .normal)
         cell.backgroundColor = color[indexPath.item]
         cell.label.text = ""
-        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(140)))
+        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(163)))
         
         return cell
     }
@@ -55,13 +54,12 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
         
-        let scale = newWidth / image.size.width
-        let newHeight = image.size.height * scale
-        UIGraphicsBeginImageContext(CGSize(width: newWidth,height: newWidth))
-        image.draw(in :CGRect(x: 0,y: 0,width: newWidth,height: newWidth))
+//        let scale = (newWidth / image.size.width) - 5
+//        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth,height: newWidth - 10))
+        image.draw(in :CGRect(x: 0,y: 0,width: newWidth,height: newWidth - 10))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
         return newImage!
     }
     
