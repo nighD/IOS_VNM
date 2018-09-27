@@ -45,7 +45,6 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
         tempAlarm.uuid = UUID().uuidString
-        tempAlarm.onSnooze = false
         if segueInfo.isEditMode {
             alarmModel.alarms[index] = tempAlarm
         }

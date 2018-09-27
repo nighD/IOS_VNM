@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
         
         //show an alert window
         let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
-        var isSnooze: Bool = false
         var soundName: String = ""
         var index: Int = -1
         if let userInfo = notification.userInfo {
@@ -56,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
             (action:UIAlertAction)->Void in self.audioPlayer?.stop()
             AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
             self.alarmModel = Alarms()
-            self.alarmModel.alarms[index].onSnooze = false
             //change UI
             var mainVC = self.window?.visibleViewController as? AlarmVC
             if mainVC == nil {
@@ -70,22 +68,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
         window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
     
-    //snooze notification handler when app in background
-    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
-        var index: Int = -1
-        var soundName: String = ""
-        if let userInfo = notification.userInfo {
-            soundName = userInfo["soundName"] as! String
-            index = userInfo["index"] as! Int
-        }
-        self.alarmModel = Alarms()
-        self.alarmModel.alarms[index].onSnooze = false
-        if identifier == Id.snoozeIdentifier {
-            alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
-            self.alarmModel.alarms[index].onSnooze = true
-        }
-        completionHandler()
-    }
     
     //print out all registed NSNotification for debug
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
