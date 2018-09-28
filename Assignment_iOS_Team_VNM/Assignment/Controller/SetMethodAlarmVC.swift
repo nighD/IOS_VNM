@@ -10,7 +10,7 @@ import UIKit
 
 class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet var tableView : UITableView!
-    var setTimeAlarmVC:SetTimeAlarmVC!
+    var setTimeAlarmVC: SetTimeAlarmVC!
     var method: [UIImage] = [UIImage(named: "camera")!,UIImage(named:"tictactoe-1")!,UIImage(named:"math")!]
     var color: [UIColor] = [UIColor .orange,UIColor .blue,UIColor .green]
     var position: [Int] = [0,1,2]
