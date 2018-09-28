@@ -44,6 +44,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempAlarm.mediaLabel = segueInfo.mediaLabel
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+        tempAlarm.chooseMethod = segueInfo.chooseMethod
         tempAlarm.uuid = UUID().uuidString
         if segueInfo.isEditMode {
             alarmModel.alarms[index] = tempAlarm
@@ -100,8 +101,9 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 3 {
-                
                 cell!.textLabel!.text = "Choose Alarm Method"
+                cell!.detailTextLabel!.text = SetMethodAlarmVC.chooseMethod(position: segueInfo.chooseMethod)
+                cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
         }
         else if indexPath.section == 1 {
@@ -181,6 +183,10 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             let dist = segue.destination as! WeekdaysVC
             dist.weekdays = segueInfo.repeatWeekdays
         }
+        else if segue.identifier == Id.alarmMethodIdentifier {
+            let dist = segue.destination as! SetMethodAlarmVC
+            dist.position = segueInfo.chooseMethod
+        }
     }
     
     @IBAction func unwindFromLabelEditView(_ segue: UIStoryboardSegue) {
@@ -197,6 +203,11 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let src = segue.source as! SoundBrowsingVC
         segueInfo.mediaLabel = src.mediaLabel
         segueInfo.mediaID = src.mediaID
+    }
+    
+    @IBAction func unwindFromMethod(_ segue: UIStoryboardSegue) {
+        let src = segue.source as! SetMethodAlarmVC
+        segueInfo.chooseMethod = src.position
     }
     
     

@@ -23,4 +23,5 @@ struct Id {
     static let labelUnwindIdentifier = "labelUnwindSegue"
     static let soundUnwindIdentifier = "soundUnwindSegue"
     static let weekdaysUnwindIdentifier = "weekdaysUnwindSegue"
+    static let methodUnwindIdentifier = "methodUnwindSegue"
 }

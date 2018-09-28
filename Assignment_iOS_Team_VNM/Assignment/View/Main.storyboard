@@ -732,9 +732,11 @@
                         <segue destination="6eH-a3-fYR" kind="presentation" identifier="alarmPIC" id="H98-RP-4cD"/>
                         <segue destination="B1f-9p-Trj" kind="show" identifier="mathVC" id="bcu-zK-MwJ"/>
                         <segue destination="VBR-7V-Odu" kind="show" identifier="tictactoeVC" id="YyM-hQ-drN"/>
+                        <segue destination="Vo6-8d-KoJ" kind="unwind" identifier="methodUnwindSegue" unwindAction="unwindFromMethod:" id="b1P-VY-x4X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IL-PD-ZcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vo6-8d-KoJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2534.7826086956525" y="491.57608695652175"/>
         </scene>
@@ -1066,6 +1068,7 @@
         <image name="reminder_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="H98-RP-4cD"/>
         <segue reference="MKJ-Z9-biP"/>
     </inferredMetricsTieBreakers>
 </document>

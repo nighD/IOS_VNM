@@ -91,7 +91,6 @@ extension WeekdaysVC {
             case 7:
                 ret += "Sat "
             default:
-                //throw
                 break
             }
         }

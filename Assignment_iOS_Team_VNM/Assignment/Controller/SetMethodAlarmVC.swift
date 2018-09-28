@@ -13,13 +13,17 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     var setTimeAlarmVC: SetTimeAlarmVC!
     var method: [UIImage] = [UIImage(named: "camera")!,UIImage(named:"tictactoe-1")!,UIImage(named:"math")!]
     var color: [UIColor] = [UIColor .orange,UIColor .blue,UIColor .green]
-    var position: [Int] = [0,1,2]
-    //
+    var position: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.accessibilityIdentifier = "tableViewMethod"
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        performSegue(withIdentifier: Id.methodUnwindIdentifier, sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return method.count;
     }
@@ -32,25 +36,45 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let position1 = position[indexPath.item]
-        if position1 == 0 {
-            //setTimeAlarmVC.alarmMethod.text = "Compare Picture"
-            self.performSegue(withIdentifier: "alarmPIC", sender: self)
+        if let cell = tableView.cellForRow(at: indexPath) {
+        if cell.isSelected {
+            cell.accessoryType = .checkmark
+            position.append(indexPath.row + 1)
+            if position.count == 2 {
+                position.removeAll()
+                position.append(indexPath.row + 1)
+                }
+            }
         }
-        else if position1 == 1 {
-           //setTimeAlarmVC.alarmMethod.text = "Tic Tac Toe"
-           //self.navigationController?.popViewController(animated: true)
-           //performSegue(withIdentifier: "saveDone", sender: self)
-           self.performSegue(withIdentifier: "tictactoeVC", sender: self)
-           //self.dismiss(animated: true, completion: nil)
-        }
-        else {
-            //setTimeAlarmVC.alarmMethod.text = "Math"
-            self.performSegue(withIdentifier: "mathVC", sender: self)
-           //self.dismiss(animated: true, completion: nil)
-        }
-        tableView.deselectRow(at: indexPath, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+        cell.accessoryType = .none
+        if let index = position.index(of: indexPath.row)
+            {
+            position.remove(at: index + 1)
+            }
+        }
+    }
+//        let position1 = position[indexPath.item]
+//        if position1 == 0 {
+//            //setTimeAlarmVC.alarmMethod.text = "Compare Picture"
+//            self.performSegue(withIdentifier: "alarmPIC", sender: self)
+//        }
+//        else if position1 == 1 {
+//           //setTimeAlarmVC.alarmMethod.text = "Tic Tac Toe"
+//           //self.navigationController?.popViewController(animated: true)
+//           //performSegue(withIdentifier: "saveDone", sender: self)
+//           self.performSegue(withIdentifier: "tictactoeVC", sender: self)
+//           //self.dismiss(animated: true, completion: nil)
+//        }
+//        else {
+//            //setTimeAlarmVC.alarmMethod.text = "Math"
+//            self.performSegue(withIdentifier: "mathVC", sender: self)
+//           //self.dismiss(animated: true, completion: nil)
+//        }
+       // tableView.deselectRow(at: indexPath, animated: true)
     
     func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
         
@@ -66,6 +90,33 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     @IBAction func Back(_ sender: UIBarButtonItem) {
          self.dismiss(animated: true, completion: nil)
         
+    }
+}
+
+extension SetMethodAlarmVC {
+    static func chooseMethod(position: [Int]) -> String {
+        if position.isEmpty {
+            return "None"
+        }
+        
+        var ret = String()
+        var sortedMethod:[Int] = [Int]()
+        
+        sortedMethod = position.sorted(by: <)
+        
+        for method in sortedMethod {
+            switch method {
+            case 1:
+                ret += "Taking a picture"
+            case 2:
+                ret += "Playing TicTacToe"
+            case 3:
+                ret += "Solving math problems"
+            default:
+                break
+            }
+        }
+        return ret
     }
 }
 //extension SetMethodAlarmVC: CellDelegate {
