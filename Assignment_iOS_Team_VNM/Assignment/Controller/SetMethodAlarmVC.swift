@@ -38,11 +38,17 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
         if cell.isSelected {
-            cell.accessoryType = .checkmark
-            position.append(indexPath.row + 1)
-            if position.count == 2 {
-                position.removeAll()
+            if indexPath.row == 0 {
+                self.performSegue(withIdentifier: "alarmpicSegue", sender: self)
                 position.append(indexPath.row + 1)
+            }
+            else {
+                cell.accessoryType = .checkmark
+                position.append(indexPath.row + 1)
+                if position.count >= 1 {
+                    position.removeAll()
+                    position.append(indexPath.row + 1)
+                    }
                 }
             }
         }
@@ -50,8 +56,8 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
-        cell.accessoryType = .none
-        if let index = position.index(of: indexPath.row)
+            cell.accessoryType = .none
+            if let index = position.index(of: indexPath.row)
             {
             position.remove(at: index + 1)
             }
@@ -87,14 +93,20 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         return newImage!
     }
     
-    @IBAction func Back(_ sender: UIBarButtonItem) {
-         self.dismiss(animated: true, completion: nil)
-        
+//    @IBAction func Back(_ sender: UIBarButtonItem) {
+//         self.dismiss(animated: true, completion: nil)
+//        
+//    }
+    
+    @IBAction func saveBtn(_ sender: UIButton) {
+        setTimeAlarmVC.methodLabel.text = chooseMethod(position: position)
+        setTimeAlarmVC.chooseMethod = position
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
 extension SetMethodAlarmVC {
-    static func chooseMethod(position: [Int]) -> String {
+    func chooseMethod(position: [Int]) -> String {
         if position.isEmpty {
             return "None"
         }

@@ -25,6 +25,8 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     var titles:[String]!
     var chosenpath:[String]!
     var imagetemp:[UIImage] = [UIImage(named: "camera")!,UIImage(named: "camera")!,UIImage(named: "camera")!]
+    var test: Int!
+    var method: String!
     
     let alert = UIAlertController(title: "Compare Image", message: "You havent chosen any image or taken any image", preferredStyle: .actionSheet)
     override func viewDidLoad() {
@@ -81,9 +83,9 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             chosenpath = try FileManager.default.contentsOfDirectory(atPath: chosenimagesDirectoryPath)
                 for image in chosenpath {
                  let data = FileManager.default.contents(atPath: chosenimagesDirectoryPath + "/\(image)")
-                 let chosenImage: UIImage!
-                 chosenImage = UIImage(data: data!)
-                 chooseImage = chosenImage
+                    let chosenImage: UIImage!
+                    chosenImage = UIImage(data: data!)
+                  //  chooseImage = chosenImage
             }
             
            
@@ -226,6 +228,7 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         if images.count == 0 || chooseImage == nil {
            
             self.present(alert, animated: true, completion: nil)
+            test = 1
         }
         else {
 
@@ -248,7 +251,8 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             let data = UIImagePNGRepresentation(chooseImage)
             let success = FileManager.default.createFile(atPath: imagePath, contents: data, attributes: nil)
         }
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
         
     }
     @IBAction func cancelBtn(_ sender: UIButton) {
@@ -264,6 +268,7 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
             
         }
     }
+    
     
     
 }

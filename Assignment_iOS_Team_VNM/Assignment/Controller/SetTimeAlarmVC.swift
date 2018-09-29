@@ -14,11 +14,13 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var methodLabel: UILabel!
     
     var alarmSet: AlarmDelegate = AlarmSet()
     var alarmModel: Alarms = Alarms()
     var segueInfo: SegueInfo!
     var enabled: Bool!
+    var chooseMethod: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempAlarm.mediaLabel = segueInfo.mediaLabel
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
-        tempAlarm.chooseMethod = segueInfo.chooseMethod
+    //    tempAlarm.chooseMethod = segueInfo.chooseMethod
         tempAlarm.uuid = UUID().uuidString
         if segueInfo.isEditMode {
             alarmModel.alarms[index] = tempAlarm
@@ -68,7 +70,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return 4
+            return 3
         }
         else {
             return 1
@@ -100,11 +102,11 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell!.detailTextLabel!.text = segueInfo.mediaLabel
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
-            else if indexPath.row == 3 {
-                cell!.textLabel!.text = "Choose Alarm Method"
-                cell!.detailTextLabel!.text = SetMethodAlarmVC.chooseMethod(position: segueInfo.chooseMethod)
-                cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
-            }
+//            else if indexPath.row == 3 {
+//                cell!.textLabel!.text = "Choose Alarm Method"
+//                cell!.detailTextLabel!.text = SetMethodAlarmVC.chooseMethod(position: segueInfo.chooseMethod)
+//                cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+//            }
         }
         else if indexPath.section == 1 {
             cell = UITableViewCell(
@@ -134,10 +136,10 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
                 performSegue(withIdentifier: Id.soundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
-            case 3:
-                performSegue(withIdentifier: Id.alarmMethodIdentifier, sender: self)
-                cell?.setSelected(true, animated: false)
-                cell?.setSelected(false, animated: false)
+//            case 3:
+//                performSegue(withIdentifier: Id.alarmMethodIdentifier, sender: self)
+//                cell?.setSelected(true, animated: false)
+//                cell?.setSelected(false, animated: false)
             default:
                 break
             }
@@ -183,10 +185,10 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             let dist = segue.destination as! WeekdaysVC
             dist.weekdays = segueInfo.repeatWeekdays
         }
-        else if segue.identifier == Id.alarmMethodIdentifier {
-            let dist = segue.destination as! SetMethodAlarmVC
-            dist.position = segueInfo.chooseMethod
-        }
+//        else if segue.identifier == Id.alarmMethodIdentifier {
+//            let dist = segue.destination as! SetMethodAlarmVC
+//            dist.position = segueInfo.chooseMethod
+//        }
     }
     
     @IBAction func unwindFromLabelEditView(_ segue: UIStoryboardSegue) {
@@ -205,11 +207,16 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         segueInfo.mediaID = src.mediaID
     }
     
-    @IBAction func unwindFromMethod(_ segue: UIStoryboardSegue) {
-        let src = segue.source as! SetMethodAlarmVC
-        segueInfo.chooseMethod = src.position
-    }
+//    @IBAction func unwindFromMethod(_ segue: UIStoryboardSegue) {
+//        let src = segue.source as! SetMethodAlarmVC
+//        segueInfo.chooseMethod = src.position
+//    }
     
+    @IBAction func chooseMethod(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "chooseMethodVC") as! SetMethodAlarmVC
+        vc.setTimeAlarmVC = self
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
