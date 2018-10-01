@@ -1,0 +1,829 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AlarmSet"
+provides-nominal:
+- "10Assignment8AlarmSetC"
+provides-member:
+- ["10Assignment8AlarmSetC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "!="
+- !private "&&"
+- !private "+"
+- !private "-"
+- !private "..<"
+- !private "<"
+- !private "<="
+- "=="
+- !private ">="
+- "AlarmDelegate"
+- "AlarmSet"
+- "Alarms"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "Bool"
+- !private "BooleanLiteralType"
+- "Calendar"
+- "CastingPrecedence"
+- !private "ComparisonResult"
+- "Date"
+- !private "Dictionary"
+- !private "Id"
+- "Int"
+- !private "NSCalendar"
+- !private "Set"
+- "String"
+- !private "TimeZone"
+- !private "UIApplication"
+- "UILocalNotification"
+- !private "UIMutableUserNotificationAction"
+- !private "UIMutableUserNotificationCategory"
+- !private "UIUserNotificationActivationMode"
+- "UIUserNotificationSettings"
+- !private "UIUserNotificationType"
+depends-member:
+- !private ["10Assignment5AlarmV", "chooseMethod"]
+- !private ["10Assignment5AlarmV", "date"]
+- !private ["10Assignment5AlarmV", "enabled"]
+- !private ["10Assignment5AlarmV", "mediaLabel"]
+- !private ["10Assignment5AlarmV", "repeatWeekdays"]
+- !private ["10Assignment13AlarmDelegateP", "AlarmSet"]
+- ["10Assignment13AlarmDelegateP", "Alarms"]
+- !private ["10Assignment13AlarmDelegateP", "Calendar"]
+- !private ["10Assignment13AlarmDelegateP", "ComparisonResult"]
+- !private ["10Assignment13AlarmDelegateP", "Date"]
+- !private ["10Assignment13AlarmDelegateP", "Id"]
+- !private ["10Assignment13AlarmDelegateP", "NSCalendar"]
+- !private ["10Assignment13AlarmDelegateP", "Set"]
+- !private ["10Assignment13AlarmDelegateP", "TimeZone"]
+- !private ["10Assignment13AlarmDelegateP", "UIApplication"]
+- !private ["10Assignment13AlarmDelegateP", "UILocalNotification"]
+- !private ["10Assignment13AlarmDelegateP", "UIMutableUserNotificationAction"]
+- !private ["10Assignment13AlarmDelegateP", "UIMutableUserNotificationCategory"]
+- !private ["10Assignment13AlarmDelegateP", "UIUserNotificationActivationMode"]
+- !private ["10Assignment13AlarmDelegateP", "UIUserNotificationSettings"]
+- !private ["10Assignment13AlarmDelegateP", "UIUserNotificationType"]
+- ["10Assignment13AlarmDelegateP", ""]
+- !private ["10Assignment13AlarmDelegateP", "alarmModel"]
+- ["10Assignment13AlarmDelegateP", "checkNotification"]
+- !private ["10Assignment13AlarmDelegateP", "compare"]
+- !private ["10Assignment13AlarmDelegateP", "correctDate"]
+- !private ["10Assignment13AlarmDelegateP", "correctSecondComponent"]
+- !private ["10Assignment13AlarmDelegateP", "minFireDateWithIndex"]
+- ["10Assignment13AlarmDelegateP", "reSchedule"]
+- ["10Assignment13AlarmDelegateP", "setNotificationWithDate"]
+- ["10Assignment13AlarmDelegateP", "setupNotificationSettings"]
+- !private ["10Assignment13AlarmDelegateP", "syncAlarmModel"]
+- !private ["10Assignment8AlarmSetC", "AlarmSet"]
+- ["10Assignment8AlarmSetC", "Alarms"]
+- !private ["10Assignment8AlarmSetC", "Bool"]
+- ["10Assignment8AlarmSetC", "Calendar"]
+- !private ["10Assignment8AlarmSetC", "ComparisonResult"]
+- ["10Assignment8AlarmSetC", "Date"]
+- !private ["10Assignment8AlarmSetC", "Id"]
+- ["10Assignment8AlarmSetC", "Int"]
+- !private ["10Assignment8AlarmSetC", "NSCalendar"]
+- !private ["10Assignment8AlarmSetC", "Set"]
+- ["10Assignment8AlarmSetC", "String"]
+- !private ["10Assignment8AlarmSetC", "TimeZone"]
+- !private ["10Assignment8AlarmSetC", "UIApplication"]
+- ["10Assignment8AlarmSetC", "UILocalNotification"]
+- !private ["10Assignment8AlarmSetC", "UIMutableUserNotificationAction"]
+- !private ["10Assignment8AlarmSetC", "UIMutableUserNotificationCategory"]
+- !private ["10Assignment8AlarmSetC", "UIUserNotificationActivationMode"]
+- ["10Assignment8AlarmSetC", "UIUserNotificationSettings"]
+- !private ["10Assignment8AlarmSetC", "UIUserNotificationType"]
+- ["10Assignment8AlarmSetC", "alarmModel"]
+- ["10Assignment8AlarmSetC", "checkNotification"]
+- !private ["10Assignment8AlarmSetC", "compare"]
+- !private ["10Assignment8AlarmSetC", "correctDate"]
+- ["10Assignment8AlarmSetC", "correctSecondComponent"]
+- ["10Assignment8AlarmSetC", "deinit"]
+- ["10Assignment8AlarmSetC", "init"]
+- !private ["10Assignment8AlarmSetC", "minFireDateWithIndex"]
+- ["10Assignment8AlarmSetC", "reSchedule"]
+- ["10Assignment8AlarmSetC", "setNotificationWithDate"]
+- ["10Assignment8AlarmSetC", "setupNotificationSettings"]
+- !private ["10Assignment8AlarmSetC", "syncAlarmModel"]
+- ["10Assignment8AlarmSetC", "weekdaysComparisonResult"]
+- !private ["10Assignment6AlarmsC", "alarms"]
+- !private ["10Assignment6AlarmsC", "count"]
+- ["10Assignment6AlarmsC", "init"]
+- !private ["Sa", "append"]
+- !private ["Sa", "enumerated"]
+- !private ["Sa", "first"]
+- !private ["Sa", "init"]
+- !private ["Sa", "isEmpty"]
+- !private ["Sa", "removeAll"]
+- !private ["Sa", "subscript"]
+- !private ["s10ArraySliceV", "date"]
+- !private ["s10ArraySliceV", "enabled"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- !private ["s23BidirectionalCollectionP", "date"]
+- !private ["s23BidirectionalCollectionP", "enabled"]
+- !private ["s23BidirectionalCollectionP", "enumerated"]
+- !private ["s23BidirectionalCollectionP", "first"]
+- !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "isEmpty"]
+- !private ["s23BidirectionalCollectionP", "removeAll"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "Unit"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "activationMode"]
+- !private ["s7CVarArgP", "alertAction"]
+- !private ["s7CVarArgP", "alertBody"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "cancelAllLocalNotifications"]
+- !private ["s7CVarArgP", "category"]
+- !private ["s7CVarArgP", "components"]
+- !private ["s7CVarArgP", "date"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "fireDate"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "identifier"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isAuthenticationRequired"]
+- !private ["s7CVarArgP", "isDestructive"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "registerUserNotificationSettings"]
+- !private ["s7CVarArgP", "removeAll"]
+- !private ["s7CVarArgP", "repeatInterval"]
+- !private ["s7CVarArgP", "scheduleLocalNotification"]
+- !private ["s7CVarArgP", "scheduledLocalNotifications"]
+- !private ["s7CVarArgP", "shared"]
+- !private ["s7CVarArgP", "soundName"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "timeZone"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "userInfo"]
+- !private ["10Foundation8CalendarV", "Identifier"]
+- !private ["10Foundation8CalendarV", "component"]
+- !private ["10Foundation8CalendarV", "init"]
+- !private ["s10CollectionP", "append"]
+- !private ["s10CollectionP", "date"]
+- !private ["s10CollectionP", "enabled"]
+- !private ["s10CollectionP", "enumerated"]
+- !private ["s10CollectionP", "first"]
+- !private ["s10CollectionP", "init"]
+- !private ["s10CollectionP", "isEmpty"]
+- !private ["s10CollectionP", "removeAll"]
+- !private ["s10CollectionP", "subscript"]
+- !private ["s10ComparableP", "compare"]
+- !private ["s10ComparableP", "init"]
+- !private ["SC16ComparisonResultO", "orderedAscending"]
+- !private ["10Foundation8CalendarV9ComponentO", "second"]
+- !private ["s28CustomDebugStringConvertibleP", "Identifier"]
+- !private ["s28CustomDebugStringConvertibleP", "Unit"]
+- !private ["s28CustomDebugStringConvertibleP", "activationMode"]
+- !private ["s28CustomDebugStringConvertibleP", "alertAction"]
+- !private ["s28CustomDebugStringConvertibleP", "alertBody"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "cancelAllLocalNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "category"]
+- !private ["s28CustomDebugStringConvertibleP", "compare"]
+- !private ["s28CustomDebugStringConvertibleP", "component"]
+- !private ["s28CustomDebugStringConvertibleP", "components"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "date"]
+- !private ["s28CustomDebugStringConvertibleP", "enabled"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "fireDate"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "identifier"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isAuthenticationRequired"]
+- !private ["s28CustomDebugStringConvertibleP", "isDestructive"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "registerUserNotificationSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "removeAll"]
+- !private ["s28CustomDebugStringConvertibleP", "repeatInterval"]
+- !private ["s28CustomDebugStringConvertibleP", "scheduleLocalNotification"]
+- !private ["s28CustomDebugStringConvertibleP", "scheduledLocalNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "shared"]
+- !private ["s28CustomDebugStringConvertibleP", "soundName"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "timeZone"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "userInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "weekday"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "compare"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "Identifier"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "append"]
+- !private ["s17CustomReflectableP", "compare"]
+- !private ["s17CustomReflectableP", "component"]
+- !private ["s17CustomReflectableP", "current"]
+- !private ["s17CustomReflectableP", "date"]
+- !private ["s17CustomReflectableP", "enabled"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "removeAll"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "weekday"]
+- !private ["s23CustomStringConvertibleP", "Identifier"]
+- !private ["s23CustomStringConvertibleP", "Unit"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "activationMode"]
+- !private ["s23CustomStringConvertibleP", "alertAction"]
+- !private ["s23CustomStringConvertibleP", "alertBody"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "cancelAllLocalNotifications"]
+- !private ["s23CustomStringConvertibleP", "category"]
+- !private ["s23CustomStringConvertibleP", "compare"]
+- !private ["s23CustomStringConvertibleP", "component"]
+- !private ["s23CustomStringConvertibleP", "components"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "date"]
+- !private ["s23CustomStringConvertibleP", "enabled"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "fireDate"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "identifier"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isAuthenticationRequired"]
+- !private ["s23CustomStringConvertibleP", "isDestructive"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "registerUserNotificationSettings"]
+- !private ["s23CustomStringConvertibleP", "removeAll"]
+- !private ["s23CustomStringConvertibleP", "repeatInterval"]
+- !private ["s23CustomStringConvertibleP", "scheduleLocalNotification"]
+- !private ["s23CustomStringConvertibleP", "scheduledLocalNotifications"]
+- !private ["s23CustomStringConvertibleP", "shared"]
+- !private ["s23CustomStringConvertibleP", "soundName"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "timeZone"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "userInfo"]
+- !private ["s23CustomStringConvertibleP", "weekday"]
+- !private ["10Foundation4DateV", "compare"]
+- !private ["10Foundation4DateV", "init"]
+- !private ["10Foundation14DateComponentsV", "weekday"]
+- !private ["s9DecodableP", "Identifier"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "append"]
+- !private ["s9DecodableP", "compare"]
+- !private ["s9DecodableP", "component"]
+- !private ["s9DecodableP", "current"]
+- !private ["s9DecodableP", "enumerated"]
+- !private ["s9DecodableP", "first"]
+- !private ["s9DecodableP", "init"]
+- !private ["s9DecodableP", "isEmpty"]
+- !private ["s9DecodableP", "removeAll"]
+- !private ["s9DecodableP", "subscript"]
+- !private ["s9DecodableP", "weekday"]
+- !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "Identifier"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "append"]
+- !private ["s9EncodableP", "compare"]
+- !private ["s9EncodableP", "component"]
+- !private ["s9EncodableP", "current"]
+- !private ["s9EncodableP", "enumerated"]
+- !private ["s9EncodableP", "first"]
+- !private ["s9EncodableP", "init"]
+- !private ["s9EncodableP", "isEmpty"]
+- !private ["s9EncodableP", "removeAll"]
+- !private ["s9EncodableP", "subscript"]
+- !private ["s9EncodableP", "weekday"]
+- !private ["s9EquatableP", "Identifier"]
+- !private ["s9EquatableP", "Unit"]
+- !private ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "activationMode"]
+- !private ["s9EquatableP", "after"]
+- !private ["s9EquatableP", "alert"]
+- !private ["s9EquatableP", "alertAction"]
+- !private ["s9EquatableP", "alertBody"]
+- !private ["s9EquatableP", "append"]
+- !private ["s9EquatableP", "background"]
+- !private ["s9EquatableP", "before"]
+- !private ["s9EquatableP", "cancelAllLocalNotifications"]
+- !private ["s9EquatableP", "category"]
+- !private ["s9EquatableP", "compare"]
+- !private ["s9EquatableP", "component"]
+- !private ["s9EquatableP", "components"]
+- !private ["s9EquatableP", "current"]
+- !private ["s9EquatableP", "date"]
+- !private ["s9EquatableP", "day"]
+- !private ["s9EquatableP", "enabled"]
+- !private ["s9EquatableP", "enumerated"]
+- !private ["s9EquatableP", "fireDate"]
+- !private ["s9EquatableP", "first"]
+- !private ["s9EquatableP", "gregorian"]
+- ["s9EquatableP", "hashValue"]
+- !private ["s9EquatableP", "identifier"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isAuthenticationRequired"]
+- !private ["s9EquatableP", "isDestructive"]
+- !private ["s9EquatableP", "isEmpty"]
+- !private ["s9EquatableP", "matchStrictly"]
+- !private ["s9EquatableP", "orderedAscending"]
+- !private ["s9EquatableP", "registerUserNotificationSettings"]
+- !private ["s9EquatableP", "removeAll"]
+- !private ["s9EquatableP", "repeatInterval"]
+- !private ["s9EquatableP", "same"]
+- !private ["s9EquatableP", "scheduleLocalNotification"]
+- !private ["s9EquatableP", "scheduledLocalNotifications"]
+- !private ["s9EquatableP", "second"]
+- !private ["s9EquatableP", "shared"]
+- !private ["s9EquatableP", "sound"]
+- !private ["s9EquatableP", "soundName"]
+- !private ["s9EquatableP", "subscript"]
+- !private ["s9EquatableP", "timeZone"]
+- !private ["s9EquatableP", "title"]
+- !private ["s9EquatableP", "userInfo"]
+- !private ["s9EquatableP", "weekOfYear"]
+- !private ["s9EquatableP", "weekday"]
+- !private ["s9EquatableP", "weekdayOrdinal"]
+- !private ["s25ExpressibleByArrayLiteralP", "alert"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- !private ["s25ExpressibleByArrayLiteralP", "date"]
+- !private ["s25ExpressibleByArrayLiteralP", "day"]
+- !private ["s25ExpressibleByArrayLiteralP", "enabled"]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "isEmpty"]
+- !private ["s25ExpressibleByArrayLiteralP", "matchStrictly"]
+- !private ["s25ExpressibleByArrayLiteralP", "removeAll"]
+- !private ["s25ExpressibleByArrayLiteralP", "second"]
+- !private ["s25ExpressibleByArrayLiteralP", "sound"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s25ExpressibleByArrayLiteralP", "weekOfYear"]
+- !private ["s25ExpressibleByArrayLiteralP", "weekday"]
+- !private ["s25ExpressibleByArrayLiteralP", "weekdayOrdinal"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s8HashableP", "Identifier"]
+- !private ["s8HashableP", "Unit"]
+- !private ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "activationMode"]
+- !private ["s8HashableP", "after"]
+- !private ["s8HashableP", "alertAction"]
+- !private ["s8HashableP", "alertBody"]
+- !private ["s8HashableP", "background"]
+- !private ["s8HashableP", "before"]
+- !private ["s8HashableP", "cancelAllLocalNotifications"]
+- !private ["s8HashableP", "category"]
+- !private ["s8HashableP", "compare"]
+- !private ["s8HashableP", "component"]
+- !private ["s8HashableP", "components"]
+- !private ["s8HashableP", "current"]
+- !private ["s8HashableP", "date"]
+- !private ["s8HashableP", "fireDate"]
+- !private ["s8HashableP", "gregorian"]
+- ["s8HashableP", "hashValue"]
+- !private ["s8HashableP", "identifier"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isAuthenticationRequired"]
+- !private ["s8HashableP", "isDestructive"]
+- !private ["s8HashableP", "orderedAscending"]
+- !private ["s8HashableP", "registerUserNotificationSettings"]
+- !private ["s8HashableP", "repeatInterval"]
+- !private ["s8HashableP", "same"]
+- !private ["s8HashableP", "scheduleLocalNotification"]
+- !private ["s8HashableP", "scheduledLocalNotifications"]
+- !private ["s8HashableP", "second"]
+- !private ["s8HashableP", "shared"]
+- !private ["s8HashableP", "soundName"]
+- !private ["s8HashableP", "timeZone"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "userInfo"]
+- !private ["s8HashableP", "weekday"]
+- !private ["10Assignment2IdV", "stopIdentifier"]
+- !private ["10Foundation8CalendarV10IdentifierO", "gregorian"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- !private ["s17MutableCollectionP", "date"]
+- !private ["s17MutableCollectionP", "enabled"]
+- !private ["s17MutableCollectionP", "enumerated"]
+- !private ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "init"]
+- !private ["s17MutableCollectionP", "isEmpty"]
+- !private ["s17MutableCollectionP", "removeAll"]
+- !private ["s17MutableCollectionP", "subscript"]
+- !private ["So10NSCalendarC", "Unit"]
+- !private ["So10NSCalendarC", "components"]
+- !private ["So10NSCalendarC", "date"]
+- !private ["So8NSCodingP", "Unit"]
+- !private ["So8NSCodingP", "activationMode"]
+- !private ["So8NSCodingP", "alertAction"]
+- !private ["So8NSCodingP", "alertBody"]
+- !private ["So8NSCodingP", "category"]
+- !private ["So8NSCodingP", "components"]
+- !private ["So8NSCodingP", "date"]
+- !private ["So8NSCodingP", "fireDate"]
+- !private ["So8NSCodingP", "identifier"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isAuthenticationRequired"]
+- !private ["So8NSCodingP", "isDestructive"]
+- !private ["So8NSCodingP", "repeatInterval"]
+- !private ["So8NSCodingP", "soundName"]
+- !private ["So8NSCodingP", "timeZone"]
+- !private ["So8NSCodingP", "title"]
+- !private ["So8NSCodingP", "userInfo"]
+- !private ["So9NSCopyingP", "Unit"]
+- !private ["So9NSCopyingP", "activationMode"]
+- !private ["So9NSCopyingP", "alertAction"]
+- !private ["So9NSCopyingP", "alertBody"]
+- !private ["So9NSCopyingP", "category"]
+- !private ["So9NSCopyingP", "components"]
+- !private ["So9NSCopyingP", "date"]
+- !private ["So9NSCopyingP", "fireDate"]
+- !private ["So9NSCopyingP", "identifier"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isAuthenticationRequired"]
+- !private ["So9NSCopyingP", "isDestructive"]
+- !private ["So9NSCopyingP", "repeatInterval"]
+- !private ["So9NSCopyingP", "soundName"]
+- !private ["So9NSCopyingP", "timeZone"]
+- !private ["So9NSCopyingP", "title"]
+- !private ["So9NSCopyingP", "userInfo"]
+- !private ["So16NSMutableCopyingP", "activationMode"]
+- !private ["So16NSMutableCopyingP", "identifier"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "isAuthenticationRequired"]
+- !private ["So16NSMutableCopyingP", "isDestructive"]
+- !private ["So16NSMutableCopyingP", "title"]
+- !private ["So8NSObjectC", "Unit"]
+- !private ["So8NSObjectC", "activationMode"]
+- !private ["So8NSObjectC", "alertAction"]
+- !private ["So8NSObjectC", "alertBody"]
+- !private ["So8NSObjectC", "cancelAllLocalNotifications"]
+- !private ["So8NSObjectC", "category"]
+- !private ["So8NSObjectC", "components"]
+- !private ["So8NSObjectC", "date"]
+- !private ["So8NSObjectC", "fireDate"]
+- !private ["So8NSObjectC", "identifier"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isAuthenticationRequired"]
+- !private ["So8NSObjectC", "isDestructive"]
+- !private ["So8NSObjectC", "registerUserNotificationSettings"]
+- !private ["So8NSObjectC", "repeatInterval"]
+- !private ["So8NSObjectC", "scheduleLocalNotification"]
+- !private ["So8NSObjectC", "scheduledLocalNotifications"]
+- !private ["So8NSObjectC", "shared"]
+- !private ["So8NSObjectC", "soundName"]
+- !private ["So8NSObjectC", "timeZone"]
+- !private ["So8NSObjectC", "title"]
+- !private ["So8NSObjectC", "userInfo"]
+- !private ["So16NSObjectProtocolP", "Unit"]
+- !private ["So16NSObjectProtocolP", "activationMode"]
+- !private ["So16NSObjectProtocolP", "alertAction"]
+- !private ["So16NSObjectProtocolP", "alertBody"]
+- !private ["So16NSObjectProtocolP", "cancelAllLocalNotifications"]
+- !private ["So16NSObjectProtocolP", "category"]
+- !private ["So16NSObjectProtocolP", "components"]
+- !private ["So16NSObjectProtocolP", "date"]
+- !private ["So16NSObjectProtocolP", "fireDate"]
+- !private ["So16NSObjectProtocolP", "identifier"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isAuthenticationRequired"]
+- !private ["So16NSObjectProtocolP", "isDestructive"]
+- !private ["So16NSObjectProtocolP", "registerUserNotificationSettings"]
+- !private ["So16NSObjectProtocolP", "repeatInterval"]
+- !private ["So16NSObjectProtocolP", "scheduleLocalNotification"]
+- !private ["So16NSObjectProtocolP", "scheduledLocalNotifications"]
+- !private ["So16NSObjectProtocolP", "shared"]
+- !private ["So16NSObjectProtocolP", "soundName"]
+- !private ["So16NSObjectProtocolP", "timeZone"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "userInfo"]
+- !private ["So14NSSecureCodingP", "Unit"]
+- !private ["So14NSSecureCodingP", "activationMode"]
+- !private ["So14NSSecureCodingP", "components"]
+- !private ["So14NSSecureCodingP", "date"]
+- !private ["So14NSSecureCodingP", "identifier"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isAuthenticationRequired"]
+- !private ["So14NSSecureCodingP", "isDestructive"]
+- !private ["So14NSSecureCodingP", "title"]
+- !private ["s9OptionSetP", "alert"]
+- !private ["s9OptionSetP", "day"]
+- !private ["s9OptionSetP", "matchStrictly"]
+- !private ["s9OptionSetP", "second"]
+- !private ["s9OptionSetP", "sound"]
+- !private ["s9OptionSetP", "weekOfYear"]
+- !private ["s9OptionSetP", "weekday"]
+- !private ["s9OptionSetP", "weekdayOrdinal"]
+- !private ["So10NSCalendarC7OptionsV", "matchStrictly"]
+- !private ["10Assignment11PersistableP", "alarms"]
+- !private ["10Assignment11PersistableP", "count"]
+- ["10Assignment11PersistableP", "init"]
+- !private ["10Assignment15PropertyReflectP", "chooseMethod"]
+- !private ["10Assignment15PropertyReflectP", "date"]
+- !private ["10Assignment15PropertyReflectP", "enabled"]
+- !private ["10Assignment15PropertyReflectP", "mediaLabel"]
+- !private ["10Assignment15PropertyReflectP", "repeatWeekdays"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- !private ["s22RandomAccessCollectionP", "date"]
+- !private ["s22RandomAccessCollectionP", "enabled"]
+- !private ["s22RandomAccessCollectionP", "enumerated"]
+- !private ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s22RandomAccessCollectionP", "isEmpty"]
+- !private ["s22RandomAccessCollectionP", "removeAll"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- !private ["s26RangeReplaceableCollectionP", "date"]
+- !private ["s26RangeReplaceableCollectionP", "enabled"]
+- !private ["s26RangeReplaceableCollectionP", "enumerated"]
+- !private ["s26RangeReplaceableCollectionP", "first"]
+- !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "isEmpty"]
+- !private ["s26RangeReplaceableCollectionP", "removeAll"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
+- !private ["s16RawRepresentableP", "alert"]
+- !private ["s16RawRepresentableP", "background"]
+- !private ["s16RawRepresentableP", "day"]
+- !private ["s16RawRepresentableP", "matchStrictly"]
+- !private ["s16RawRepresentableP", "orderedAscending"]
+- !private ["s16RawRepresentableP", "second"]
+- !private ["s16RawRepresentableP", "sound"]
+- !private ["s16RawRepresentableP", "weekOfYear"]
+- !private ["s16RawRepresentableP", "weekday"]
+- !private ["s16RawRepresentableP", "weekdayOrdinal"]
+- !private ["10Foundation20ReferenceConvertibleP", "Identifier"]
+- !private ["10Foundation20ReferenceConvertibleP", "compare"]
+- !private ["10Foundation20ReferenceConvertibleP", "component"]
+- !private ["10Foundation20ReferenceConvertibleP", "current"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "weekday"]
+- !private ["s8SequenceP", "append"]
+- !private ["s8SequenceP", "date"]
+- !private ["s8SequenceP", "enabled"]
+- !private ["s8SequenceP", "enumerated"]
+- !private ["s8SequenceP", "first"]
+- !private ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "isEmpty"]
+- !private ["s8SequenceP", "removeAll"]
+- !private ["s8SequenceP", "subscript"]
+- !private ["s3SetV", "init"]
+- !private ["s10SetAlgebraP", "alert"]
+- !private ["s10SetAlgebraP", "day"]
+- !private ["s10SetAlgebraP", "init"]
+- !private ["s10SetAlgebraP", "matchStrictly"]
+- !private ["s10SetAlgebraP", "second"]
+- !private ["s10SetAlgebraP", "sound"]
+- !private ["s10SetAlgebraP", "weekOfYear"]
+- !private ["s10SetAlgebraP", "weekday"]
+- !private ["s10SetAlgebraP", "weekdayOrdinal"]
+- !private ["SS", "init"]
+- !private ["s14StringProtocolP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["10Foundation8TimeZoneV", "current"]
+- !private ["So13UIApplicationC", "cancelAllLocalNotifications"]
+- !private ["So13UIApplicationC", "registerUserNotificationSettings"]
+- !private ["So13UIApplicationC", "scheduleLocalNotification"]
+- !private ["So13UIApplicationC", "scheduledLocalNotifications"]
+- !private ["So13UIApplicationC", "shared"]
+- !private ["So19UILocalNotificationC", "alertAction"]
+- !private ["So19UILocalNotificationC", "alertBody"]
+- !private ["So19UILocalNotificationC", "category"]
+- !private ["So19UILocalNotificationC", "fireDate"]
+- !private ["So19UILocalNotificationC", "init"]
+- !private ["So19UILocalNotificationC", "repeatInterval"]
+- !private ["So19UILocalNotificationC", "soundName"]
+- !private ["So19UILocalNotificationC", "timeZone"]
+- !private ["So19UILocalNotificationC", "userInfo"]
+- !private ["So31UIMutableUserNotificationActionC", "activationMode"]
+- !private ["So31UIMutableUserNotificationActionC", "identifier"]
+- !private ["So31UIMutableUserNotificationActionC", "init"]
+- !private ["So31UIMutableUserNotificationActionC", "isAuthenticationRequired"]
+- !private ["So31UIMutableUserNotificationActionC", "isDestructive"]
+- !private ["So31UIMutableUserNotificationActionC", "title"]
+- !private ["So33UIMutableUserNotificationCategoryC", "identifier"]
+- !private ["So33UIMutableUserNotificationCategoryC", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "cancelAllLocalNotifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "registerUserNotificationSettings"]
+- !private ["So30UIPasteConfigurationSupportingP", "scheduleLocalNotification"]
+- !private ["So30UIPasteConfigurationSupportingP", "scheduledLocalNotifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "shared"]
+- !private ["So11UIResponderC", "cancelAllLocalNotifications"]
+- !private ["So11UIResponderC", "registerUserNotificationSettings"]
+- !private ["So11UIResponderC", "scheduleLocalNotification"]
+- !private ["So11UIResponderC", "scheduledLocalNotifications"]
+- !private ["So11UIResponderC", "shared"]
+- !private ["So30UIResponderStandardEditActionsP", "cancelAllLocalNotifications"]
+- !private ["So30UIResponderStandardEditActionsP", "registerUserNotificationSettings"]
+- !private ["So30UIResponderStandardEditActionsP", "scheduleLocalNotification"]
+- !private ["So30UIResponderStandardEditActionsP", "scheduledLocalNotifications"]
+- !private ["So30UIResponderStandardEditActionsP", "shared"]
+- !private ["So24UIUserNotificationActionC", "activationMode"]
+- !private ["So24UIUserNotificationActionC", "identifier"]
+- !private ["So24UIUserNotificationActionC", "init"]
+- !private ["So24UIUserNotificationActionC", "isAuthenticationRequired"]
+- !private ["So24UIUserNotificationActionC", "isDestructive"]
+- !private ["So24UIUserNotificationActionC", "title"]
+- !private ["SC32UIUserNotificationActivationModeO", "background"]
+- !private ["So26UIUserNotificationCategoryC", "identifier"]
+- !private ["So26UIUserNotificationCategoryC", "init"]
+- !private ["So26UIUserNotificationSettingsC", "init"]
+- !private ["SC22UIUserNotificationTypeV", "alert"]
+- !private ["SC22UIUserNotificationTypeV", "sound"]
+- !private ["So10NSCalendarC4UnitV", "day"]
+- !private ["So10NSCalendarC4UnitV", "second"]
+- !private ["So10NSCalendarC4UnitV", "weekOfYear"]
+- !private ["So10NSCalendarC4UnitV", "weekday"]
+- !private ["So10NSCalendarC4UnitV", "weekdayOrdinal"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "date"]
+- !private ["s14_ArrayProtocolP", "enabled"]
+- !private ["s14_ArrayProtocolP", "enumerated"]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "isEmpty"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- !private ["s24_DestructorSafeContainerP", "date"]
+- !private ["s24_DestructorSafeContainerP", "enabled"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- !private ["s24_DestructorSafeContainerP", "isEmpty"]
+- !private ["s24_DestructorSafeContainerP", "removeAll"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "Unit"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "components"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Unit"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "activationMode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "alertAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "alertBody"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cancelAllLocalNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "category"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "components"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "date"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fireDate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "identifier"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isAuthenticationRequired"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isDestructive"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerUserNotificationSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "repeatInterval"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scheduleLocalNotification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scheduledLocalNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "soundName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "timeZone"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- !private ["10Foundation14_MutableBoxingP", "Identifier"]
+- !private ["10Foundation14_MutableBoxingP", "component"]
+- !private ["10Foundation14_MutableBoxingP", "init"]
+- !private ["10Foundation14_MutableBoxingP", "weekday"]
+- !private ["s21_ObjectiveCBridgeableP", "Identifier"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- !private ["s21_ObjectiveCBridgeableP", "compare"]
+- !private ["s21_ObjectiveCBridgeableP", "component"]
+- !private ["s21_ObjectiveCBridgeableP", "current"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "removeAll"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "weekday"]
+- !private ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- !private "10Assignment5AlarmV"
+- "10Assignment13AlarmDelegateP"
+- "10Assignment8AlarmSetC"
+- "10Assignment6AlarmsC"
+- !private "Sa"
+- !private "s10ArraySliceV"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "s7CVarArgP"
+- !private "10Foundation8CalendarV"
+- !private "s10CollectionP"
+- !private "s10ComparableP"
+- !private "SC16ComparisonResultO"
+- !private "10Foundation8CalendarV9ComponentO"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "10Foundation4DateV"
+- !private "10Foundation14DateComponentsV"
+- !private "s9DecodableP"
+- !private "s10DictionaryV"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "s8HashableP"
+- !private "10Assignment2IdV"
+- !private "10Foundation8CalendarV10IdentifierO"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
+- !private "So10NSCalendarC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "s9OptionSetP"
+- !private "So10NSCalendarC7OptionsV"
+- "10Assignment11PersistableP"
+- !private "10Assignment15PropertyReflectP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s16RawRepresentableP"
+- !private "10Foundation20ReferenceConvertibleP"
+- !private "s8SequenceP"
+- !private "s3SetV"
+- !private "s10SetAlgebraP"
+- !private "SS"
+- !private "s14StringProtocolP"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "10Foundation8TimeZoneV"
+- !private "So13UIApplicationC"
+- !private "So19UILocalNotificationC"
+- !private "So31UIMutableUserNotificationActionC"
+- !private "So33UIMutableUserNotificationCategoryC"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So24UIUserNotificationActionC"
+- !private "SC32UIUserNotificationActivationModeO"
+- !private "So26UIUserNotificationCategoryC"
+- !private "So26UIUserNotificationSettingsC"
+- !private "SC22UIUserNotificationTypeV"
+- !private "So10NSCalendarC4UnitV"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "10Foundation14_MutableBoxingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MediaPlayer.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+interface-hash: "38716865e10d1640d354b796e777ec09"

@@ -17,7 +17,8 @@ class tableViewCellTableViewCell: UITableViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button : UIButton!
 //    var controllerview : UIViewController!
-//    var storyboardID : String!
+    @IBOutlet weak var image0: UIImageView!
+    //    var storyboardID : String!
 //    var delegate : CellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -112,7 +112,9 @@ class AlarmVC: UITableViewController {
         alarmModel.alarms[index].enabled = sender.isOn
         if sender.isOn {
             print("switch on")
-            alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, soundName: alarmModel.alarms[index].mediaLabel, index: index)
+            alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, soundName: alarmModel.alarms[index].mediaLabel, index: index, method: alarmModel.alarms[index].chooseMethod)
+            print("here:")
+            print(alarmModel.alarms[index].chooseMethod)
             tableView.reloadData()
         }
         else {

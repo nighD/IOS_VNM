@@ -163,11 +163,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # define SWIFT_DEPRECATED_OBJC(Msg) SWIFT_DEPRECATED_MSG(Msg)
 #endif
 #if __has_feature(modules)
-@import ObjectiveC;
-@import Foundation;
 @import UIKit;
-@import AVFoundation;
+@import Foundation;
 @import CoreGraphics;
+@import AVFoundation;
+@import MediaPlayer;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -185,14 +185,18 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+@class UITextField;
+@class NSBundle;
 @class NSCoder;
 
-SWIFT_CLASS("_TtC10Assignment5Alarm")
-@interface Alarm : NSObject <NSCoding>
-- (void)encodeWithCoder:(NSCoder * _Nonnull)aCoder;
-- (nonnull instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+SWIFT_CLASS("_TtC10Assignment11AlarmNameVC")
+@interface AlarmNameVC : UIViewController <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified labelTextField;
+- (void)viewDidLoad;
+- (void)didReceiveMemoryWarning;
+- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UIBarButtonItem;
@@ -203,7 +207,6 @@ SWIFT_CLASS("_TtC10Assignment5Alarm")
 @class UIImagePickerController;
 @class UIButton;
 @class UIStoryboardSegue;
-@class NSBundle;
 
 SWIFT_CLASS("_TtC10Assignment8AlarmPIC")
 @interface AlarmPIC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -229,16 +232,19 @@ SWIFT_CLASS("_TtC10Assignment8AlarmPIC")
 @class UISwitch;
 
 SWIFT_CLASS("_TtC10Assignment7AlarmVC")
-@interface AlarmVC : UITableViewController <AVAudioPlayerDelegate>
+@interface AlarmVC : UITableViewController
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
-- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (IBAction)switchChanged:(UISwitch * _Null_unspecified)sender;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (IBAction)switchTapped:(UISwitch * _Nonnull)sender;
 - (void)tableView:(UITableView * _Nonnull)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (IBAction)unwindtoAlarmWithSender:(UIStoryboardSegue * _Nonnull)sender;
+- (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
+- (IBAction)unwindFromAddEditAlarmView:(UIStoryboardSegue * _Nonnull)segue;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -246,25 +252,24 @@ SWIFT_CLASS("_TtC10Assignment7AlarmVC")
 
 @class UIWindow;
 @class UIApplication;
+@class UILocalNotification;
+@class UIUserNotificationSettings;
+@class AVAudioPlayer;
 
 SWIFT_CLASS("_TtC10Assignment11AppDelegate")
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <AVAudioPlayerDelegate, UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions SWIFT_WARN_UNUSED_RESULT;
+- (void)application:(UIApplication * _Nonnull)application didReceiveLocalNotification:(UILocalNotification * _Nonnull)notification;
+- (void)application:(UIApplication * _Nonnull)application didRegisterUserNotificationSettings:(UIUserNotificationSettings * _Nonnull)notificationSettings;
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer * _Nonnull)player successfully:(BOOL)flag;
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer * _Nonnull)player error:(NSError * _Nullable)error;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
 - (void)applicationWillEnterForeground:(UIApplication * _Nonnull)application;
 - (void)applicationDidBecomeActive:(UIApplication * _Nonnull)application;
 - (void)applicationWillTerminate:(UIApplication * _Nonnull)application;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC10Assignment4Line")
-@interface Line : UIView
-- (void)drawRect:(CGRect)rect;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class UILabel;
@@ -334,44 +339,54 @@ SWIFT_CLASS("_TtC10Assignment16SetMethodAlarmVC")
 @interface SetMethodAlarmVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) IBOutlet UITableView * _Null_unspecified tableView;
 - (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (IBAction)Back:(UIBarButtonItem * _Nonnull)sender;
+- (void)tableView:(UITableView * _Nonnull)tableView didDeselectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (IBAction)saveBtn:(UIButton * _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 @class UIDatePicker;
-@class UITextField;
 
 SWIFT_CLASS("_TtC10Assignment14SetTimeAlarmVC")
-@interface SetTimeAlarmVC : UIViewController <AVAudioPlayerDelegate, UITextFieldDelegate>
-@property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified saveButton;
-@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified timePicker;
-@property (nonatomic, weak) IBOutlet UITextField * _Null_unspecified alarmLbl;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified soundName;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified alarmMethod;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified repeatDaysLabel;
+@interface SetTimeAlarmVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UIDatePicker * _Null_unspecified datePicker;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified tableView;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified methodLabel;
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
-- (BOOL)textFieldShouldReturn:(UITextField * _Nonnull)textField SWIFT_WARN_UNUSED_RESULT;
-- (void)textFieldDidEndEditing:(UITextField * _Nonnull)textField;
-- (void)textFieldDidBeginEditing:(UITextField * _Nonnull)textField;
-- (IBAction)timeChanged:(UIDatePicker * _Nonnull)sender;
-- (IBAction)cancelBtn:(id _Nullable)sender;
+- (IBAction)saveEditAlarm:(id _Nonnull)sender;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (void)prepareForSegue:(UIStoryboardSegue * _Nonnull)segue sender:(id _Nullable)sender;
-- (IBAction)repeatTapped:(id _Nonnull)sender;
+- (IBAction)unwindFromLabelEditView:(UIStoryboardSegue * _Nonnull)segue;
+- (IBAction)unwindFromWeekdaysView:(UIStoryboardSegue * _Nonnull)segue;
+- (IBAction)unwindFromMediaView:(UIStoryboardSegue * _Nonnull)segue;
+- (IBAction)chooseMethod:(id _Nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIView;
 
 SWIFT_CLASS("_TtC10Assignment15SoundBrowsingVC")
-@interface SoundBrowsingVC : UITableViewController <AVAudioPlayerDelegate>
-- (IBAction)saveSound:(id _Nonnull)sender;
-- (IBAction)abortSelecting:(id _Nonnull)sender;
+@interface SoundBrowsingVC : UITableViewController <MPMediaPickerControllerDelegate>
+- (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)didReceiveMemoryWarning;
+- (void)tableView:(UITableView * _Nonnull)tableView willDisplayHeaderView:(UIView * _Nonnull)view forSection:(NSInteger)section;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSString * _Nullable)tableView:(UITableView * _Nonnull)tableView titleForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
@@ -402,27 +417,21 @@ SWIFT_CLASS("_TtC10Assignment11TicTacToeVC")
 @end
 
 
-SWIFT_CLASS("_TtC10Assignment12WeekdaysCell")
-@interface WeekdaysCell : UITableViewCell
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified weeksday;
-- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
 
 
 SWIFT_CLASS("_TtC10Assignment10WeekdaysVC")
-@interface WeekdaysVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified weeksdayTable;
+@interface WeekdaysVC : UITableViewController
 - (void)viewDidLoad;
+- (void)viewWillDisappear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
-- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (void)tableView:(UITableView * _Nonnull)tableView didDeselectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
-- (IBAction)done:(UIBarButtonItem * _Nonnull)sender;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
+
+
 
 
 SWIFT_CLASS("_TtC10Assignment18alarmTableViewCell")
@@ -436,18 +445,11 @@ SWIFT_CLASS("_TtC10Assignment18alarmTableViewCell")
 @end
 
 
-SWIFT_CLASS("_TtC10Assignment25imageUICollectionViewCell")
-@interface imageUICollectionViewCell : UICollectionViewCell
-@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified image1;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
 SWIFT_CLASS("_TtC10Assignment26tableViewCellTableViewCell")
 @interface tableViewCellTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified label;
 @property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified button;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified image0;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);

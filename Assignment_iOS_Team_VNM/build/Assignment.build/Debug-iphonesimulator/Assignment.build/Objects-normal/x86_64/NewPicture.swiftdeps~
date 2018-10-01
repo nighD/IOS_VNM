@@ -127,6 +127,7 @@ depends-member:
 - ["s7CVarArgP", "UIView"]
 - ["s7CVarArgP", ""]
 - !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "addAction"]
 - !private ["s7CVarArgP", "addOperation"]
 - !private ["s7CVarArgP", "allowsEditing"]
 - !private ["s7CVarArgP", "borderColor"]
@@ -196,6 +197,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "UIImageView"]
 - ["s28CustomDebugStringConvertibleP", "UIView"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addAction"]
 - !private ["s28CustomDebugStringConvertibleP", "addOperation"]
 - !private ["s28CustomDebugStringConvertibleP", "allowsEditing"]
 - !private ["s28CustomDebugStringConvertibleP", "borderColor"]
@@ -274,6 +276,7 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UIView"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "addAction"]
 - !private ["s23CustomStringConvertibleP", "addOperation"]
 - !private ["s23CustomStringConvertibleP", "allowsEditing"]
 - !private ["s23CustomStringConvertibleP", "borderColor"]
@@ -353,6 +356,7 @@ depends-member:
 - ["s9EquatableP", ""]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "actionSheet"]
+- !private ["s9EquatableP", "addAction"]
 - !private ["s9EquatableP", "addOperation"]
 - !private ["s9EquatableP", "allowsEditing"]
 - !private ["s9EquatableP", "borderColor"]
@@ -440,6 +444,7 @@ depends-member:
 - ["s8HashableP", ""]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "actionSheet"]
+- !private ["s8HashableP", "addAction"]
 - !private ["s8HashableP", "addOperation"]
 - !private ["s8HashableP", "allowsEditing"]
 - !private ["s8HashableP", "borderColor"]
@@ -516,6 +521,7 @@ depends-member:
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UIView"]
 - ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addAction"]
 - !private ["So8NSCodingP", "allowsEditing"]
 - !private ["So8NSCodingP", "borderColor"]
 - !private ["So8NSCodingP", "cgColor"]
@@ -587,6 +593,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "UIImageView"]
 - ["So26NSExtensionRequestHandlingP", "UIView"]
 - ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "addAction"]
 - !private ["So26NSExtensionRequestHandlingP", "allowsEditing"]
 - !private ["So26NSExtensionRequestHandlingP", "checkImagesComparable"]
 - !private ["So26NSExtensionRequestHandlingP", "compareImages"]
@@ -657,6 +664,7 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UIView"]
 - ["So8NSObjectC", "Upload"]
+- !private ["So8NSObjectC", "addAction"]
 - !private ["So8NSObjectC", "addOperation"]
 - !private ["So8NSObjectC", "allowsEditing"]
 - ["So8NSObjectC", "back"]
@@ -728,6 +736,7 @@ depends-member:
 - ["So16NSObjectProtocolP", "UIImageView"]
 - ["So16NSObjectProtocolP", "UIView"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["So16NSObjectProtocolP", "addAction"]
 - !private ["So16NSObjectProtocolP", "addOperation"]
 - !private ["So16NSObjectProtocolP", "allowsEditing"]
 - !private ["So16NSObjectProtocolP", "borderColor"]
@@ -880,6 +889,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So13UIAlertActionC", "init"]
 - !private ["SC18UIAlertActionStyleO", "cancel"]
+- !private ["So17UIAlertControllerC", "addAction"]
 - !private ["So17UIAlertControllerC", "init"]
 - !private ["SC22UIAlertControllerStyleO", "actionSheet"]
 - !private ["So12UIAppearanceP", "image"]
@@ -908,6 +918,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - ["So21UIAppearanceContainerP", "UIView"]
 - ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "addAction"]
 - !private ["So21UIAppearanceContainerP", "allowsEditing"]
 - !private ["So21UIAppearanceContainerP", "checkImagesComparable"]
 - !private ["So21UIAppearanceContainerP", "compareImages"]
@@ -964,6 +975,7 @@ depends-member:
 - ["So18UIContentContainerP", "UIImageView"]
 - ["So18UIContentContainerP", "UIView"]
 - ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "addAction"]
 - !private ["So18UIContentContainerP", "allowsEditing"]
 - !private ["So18UIContentContainerP", "checkImagesComparable"]
 - !private ["So18UIContentContainerP", "compareImages"]
@@ -1022,6 +1034,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UIView"]
 - ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "addAction"]
 - !private ["So18UIFocusEnvironmentP", "allowsEditing"]
 - !private ["So18UIFocusEnvironmentP", "checkImagesComparable"]
 - !private ["So18UIFocusEnvironmentP", "compareImages"]
@@ -1183,6 +1196,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UIView"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "addAction"]
 - !private ["So30UIPasteConfigurationSupportingP", "allowsEditing"]
 - !private ["So30UIPasteConfigurationSupportingP", "checkImagesComparable"]
 - !private ["So30UIPasteConfigurationSupportingP", "compareImages"]
@@ -1244,6 +1258,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UIView"]
 - ["So11UIResponderC", "Upload"]
+- !private ["So11UIResponderC", "addAction"]
 - !private ["So11UIResponderC", "allowsEditing"]
 - ["So11UIResponderC", "back"]
 - ["So11UIResponderC", "checkImagesComparable"]
@@ -1302,6 +1317,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UIView"]
 - ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "addAction"]
 - !private ["So30UIResponderStandardEditActionsP", "allowsEditing"]
 - !private ["So30UIResponderStandardEditActionsP", "checkImagesComparable"]
 - !private ["So30UIResponderStandardEditActionsP", "compareImages"]
@@ -1332,6 +1348,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "sourceType"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
 - !private ["So16UIStateRestoringP", "Array"]
 - !private ["So16UIStateRestoringP", "CGBitmapInfo"]
@@ -1355,6 +1372,7 @@ depends-member:
 - ["So16UIStateRestoringP", "UIImageView"]
 - ["So16UIStateRestoringP", "UIView"]
 - ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "addAction"]
 - !private ["So16UIStateRestoringP", "allowsEditing"]
 - !private ["So16UIStateRestoringP", "checkImagesComparable"]
 - !private ["So16UIStateRestoringP", "compareImages"]
@@ -1404,6 +1422,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - ["So18UITraitEnvironmentP", "UIView"]
 - ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "addAction"]
 - !private ["So18UITraitEnvironmentP", "allowsEditing"]
 - !private ["So18UITraitEnvironmentP", "checkImagesComparable"]
 - !private ["So18UITraitEnvironmentP", "compareImages"]
@@ -1470,6 +1489,7 @@ depends-member:
 - ["So16UIViewControllerC", "UIView"]
 - ["So16UIViewControllerC", "Upload"]
 - ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "addAction"]
 - !private ["So16UIViewControllerC", "allowsEditing"]
 - ["So16UIViewControllerC", "back"]
 - ["So16UIViewControllerC", "checkImagesComparable"]
@@ -1550,6 +1570,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addOperation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "allowsEditing"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "borderColor"]
@@ -1734,6 +1755,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MediaPlayer.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -1746,8 +1768,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
