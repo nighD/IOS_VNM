@@ -51,23 +51,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
                     }
         
         print(method)
-        if method[0] == 2 {
+        if method[0] == 1 {
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "alarmpic") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        else if method[0] == 2 {
             let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
-        else if method[0] == 3 {
+        else {
             let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "math") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewController
             self.window?.makeKeyAndVisible()
         }
         
-        let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
-                    self.window = UIWindow(frame: UIScreen.main.bounds)
-                    self.window?.rootViewController = initialViewController
-                    self.window?.makeKeyAndVisible()
+//        let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
+//                    self.window = UIWindow(frame: UIScreen.main.bounds)
+//                    self.window?.rootViewController = initialViewController
+//                    self.window?.makeKeyAndVisible()
         
 //        //show an alert window
 //        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)

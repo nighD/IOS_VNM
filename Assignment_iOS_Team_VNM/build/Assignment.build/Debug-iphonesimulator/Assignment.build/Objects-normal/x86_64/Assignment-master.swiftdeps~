@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "b81c4af93d6f5884e517cd3faedc7d26"
-build_time: [1538382514, 816962000]
+build_time: [1538396513, 882861000]
 inputs:
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/SoundDelegate.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/AlarmPIC.swift": [1538368889, 0]
@@ -23,7 +23,7 @@ inputs:
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/NotificationName+Extension.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Services/DayServices.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/TicTacToeVC.swift": [1538303749, 0]
-  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/AppDelegate.swift": [1538381611, 0]
+  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/AppDelegate.swift": [1538396513, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/PropertyReflect.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Model/Weekdays.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/SetTimeAlarmVC.swift": [1538382514, 0]

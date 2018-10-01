@@ -604,7 +604,7 @@
         <!--AlarmPIC-->
         <scene sceneID="r12-ut-Sje">
             <objects>
-                <viewController title="AlarmPIC" id="6eH-a3-fYR" customClass="AlarmPIC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="alarmpic" storyboardIdentifier="alarmpic" title="AlarmPIC" id="6eH-a3-fYR" customClass="AlarmPIC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kh7-px-7cf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1093,6 +1093,6 @@
         <image name="reminder_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p7D-I9-eTP"/>
+        <segue reference="MKJ-Z9-biP"/>
     </inferredMetricsTieBreakers>
 </document>

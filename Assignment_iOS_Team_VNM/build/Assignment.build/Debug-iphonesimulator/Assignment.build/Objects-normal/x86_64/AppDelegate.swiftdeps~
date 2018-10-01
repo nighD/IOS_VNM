@@ -16,6 +16,7 @@ provides-dynamic-lookup:
 - "audioPlayerDidFinishPlaying"
 - "window"
 depends-top-level:
+- !private "=="
 - "AVAudioPlayer"
 - "AVAudioPlayerDelegate"
 - !private "AVAudioSession"
@@ -159,8 +160,11 @@ depends-member:
 - !private ["10Assignment11AppDelegateC", "print"]
 - ["10Assignment11AppDelegateC", "showModally"]
 - ["10Assignment11AppDelegateC", "window"]
+- !private ["Sa", "subscript"]
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["s23BidirectionalCollectionP", "subscript"]
 - !private ["s13BinaryIntegerP", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So6BundleC", "main"]
 - !private ["So6BundleC", "path"]
 - !private ["So15CALayerDelegateP", "init"]
@@ -183,6 +187,7 @@ depends-member:
 - !private ["s7CVarArgP", "UIWindow"]
 - !private ["s7CVarArgP", "URL"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "alarmScheduler"]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
@@ -292,7 +297,9 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "types"]
 - !private ["s28CustomDebugStringConvertibleP", "userInfo"]
 - ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "AVAudioPlayer"]
@@ -311,6 +318,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - !private ["s23CustomStringConvertibleP", "URL"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "alarmScheduler"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
@@ -356,9 +364,11 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "types"]
 - !private ["s23CustomStringConvertibleP", "userInfo"]
 - ["s23CustomStringConvertibleP", "window"]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "subscript"]
 - !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
 - !private ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EquatableP", "AVAudioPlayer"]
@@ -377,6 +387,7 @@ depends-member:
 - !private ["s9EquatableP", "UIWindow"]
 - !private ["s9EquatableP", "URL"]
 - ["s9EquatableP", ""]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "alarmScheduler"]
 - ["s9EquatableP", "application"]
 - ["s9EquatableP", "applicationDidBecomeActive"]
@@ -425,6 +436,8 @@ depends-member:
 - ["s9EquatableP", "window"]
 - !private ["s5ErrorP", "localizedDescription"]
 - !private ["s25ExpressibleByArrayLiteralP", "rawValue"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
@@ -447,6 +460,7 @@ depends-member:
 - !private ["s8HashableP", "UIWindow"]
 - !private ["s8HashableP", "URL"]
 - ["s8HashableP", ""]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "alarmScheduler"]
 - ["s8HashableP", "application"]
 - ["s8HashableP", "applicationDidBecomeActive"]
@@ -491,8 +505,10 @@ depends-member:
 - !private ["s8HashableP", "types"]
 - !private ["s8HashableP", "userInfo"]
 - ["s8HashableP", "window"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "subscript"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "localizedDescription"]
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
@@ -646,7 +662,9 @@ depends-member:
 - !private ["s7NumericP", "init"]
 - !private ["s9OptionSetP", "rawValue"]
 - ["10Assignment11PersistableP", "init"]
+- !private ["s22RandomAccessCollectionP", "subscript"]
 - !private ["s26RangeReplaceableCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s16RawRepresentableP", "rawValue"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["s8SequenceP", "init"]
@@ -943,11 +961,14 @@ depends-member:
 - !private ["s6UInt32V", "init"]
 - !private ["10Foundation3URLV", "init"]
 - !private ["s15UnsignedIntegerP", "init"]
+- !private ["s14_ArrayProtocolP", "subscript"]
 - !private ["s18_BitwiseOperationsP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "tintColor"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
@@ -1016,6 +1037,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "types"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s16_SwiftStringViewP", "init"]
@@ -1027,8 +1049,10 @@ depends-nominal:
 - "10Assignment8AlarmSetC"
 - "10Assignment6AlarmsC"
 - "10Assignment11AppDelegateC"
+- !private "Sa"
 - !private "s23BidirectionalCollectionP"
 - !private "s13BinaryIntegerP"
+- !private "Sb"
 - !private "So6BundleC"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
@@ -1044,6 +1068,7 @@ depends-nominal:
 - "s9EquatableP"
 - !private "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
@@ -1053,6 +1078,7 @@ depends-nominal:
 - "s8HashableP"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
+- !private "s17MutableCollectionP"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So7NSErrorC"
@@ -1065,6 +1091,7 @@ depends-nominal:
 - !private "s7NumericP"
 - !private "s9OptionSetP"
 - "10Assignment11PersistableP"
+- !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
@@ -1103,8 +1130,11 @@ depends-nominal:
 - !private "s6UInt32V"
 - !private "10Foundation3URLV"
 - !private "s15UnsignedIntegerP"
+- !private "s14_ArrayProtocolP"
 - !private "s18_BitwiseOperationsP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
 - !private "s34_ExpressibleByBuiltinStringLiteralP"
