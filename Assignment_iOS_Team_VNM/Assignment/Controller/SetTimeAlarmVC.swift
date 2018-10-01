@@ -108,13 +108,6 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //                cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
 //            }
         }
-        else if indexPath.section == 1 {
-            cell = UITableViewCell(
-                style: UITableViewCellStyle.default, reuseIdentifier: Id.settingIdentifier)
-            cell!.textLabel!.text = "Delete Alarm"
-            cell!.textLabel!.textAlignment = .center
-            cell!.textLabel!.textColor = UIColor.red
-        }
         
         return cell!
     }
