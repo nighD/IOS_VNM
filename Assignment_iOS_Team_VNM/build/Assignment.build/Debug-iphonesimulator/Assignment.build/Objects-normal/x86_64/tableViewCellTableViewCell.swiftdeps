@@ -11,6 +11,7 @@ provides-member:
 provides-dynamic-lookup:
 - "awakeFromNib"
 - "button"
+- "image0"
 - "label"
 - "setSelected"
 depends-top-level:
@@ -18,6 +19,7 @@ depends-top-level:
 - "CellDelegate"
 - "String"
 - "UIButton"
+- "UIImageView"
 - "UILabel"
 - "UITableViewCell"
 - "tableViewCellTableViewCell"
@@ -54,9 +56,11 @@ depends-member:
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "awakeFromNib"]
 - ["So8NSObjectC", "button"]
+- ["So8NSObjectC", "image0"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "label"]
 - ["So8NSObjectC", "setSelected"]
@@ -102,9 +106,11 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "awakeFromNib"]
 - ["So11UIResponderC", "button"]
+- ["So11UIResponderC", "image0"]
 - ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "label"]
 - ["So11UIResponderC", "setSelected"]
@@ -114,10 +120,12 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So15UITableViewCellC", "Bool"]
 - ["So15UITableViewCellC", "UIButton"]
+- ["So15UITableViewCellC", "UIImageView"]
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", ""]
 - ["So15UITableViewCellC", "awakeFromNib"]
 - ["So15UITableViewCellC", "button"]
+- ["So15UITableViewCellC", "image0"]
 - ["So15UITableViewCellC", "init"]
 - ["So15UITableViewCellC", "label"]
 - ["So15UITableViewCellC", "setSelected"]
@@ -127,9 +135,11 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setSelected"]
 - ["So6UIViewC", "Bool"]
 - ["So6UIViewC", "UIButton"]
+- ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "awakeFromNib"]
 - ["So6UIViewC", "button"]
+- ["So6UIViewC", "image0"]
 - ["So6UIViewC", "init"]
 - ["So6UIViewC", "label"]
 - ["So6UIViewC", "setSelected"]
@@ -143,10 +153,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setSelected"]
 - ["10Assignment018tableViewCellTablecD0C", "Bool"]
 - ["10Assignment018tableViewCellTablecD0C", "UIButton"]
+- ["10Assignment018tableViewCellTablecD0C", "UIImageView"]
 - ["10Assignment018tableViewCellTablecD0C", "UILabel"]
 - ["10Assignment018tableViewCellTablecD0C", "awakeFromNib"]
 - ["10Assignment018tableViewCellTablecD0C", "button"]
 - ["10Assignment018tableViewCellTablecD0C", "deinit"]
+- ["10Assignment018tableViewCellTablecD0C", "image0"]
 - ["10Assignment018tableViewCellTablecD0C", "init"]
 - ["10Assignment018tableViewCellTablecD0C", "label"]
 - ["10Assignment018tableViewCellTablecD0C", "setSelected"]
@@ -193,6 +205,7 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/MediaPlayer.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
@@ -205,9 +218,9 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/usr/include/Darwin.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/MediaPlayer.framework/Headers/MediaPlayer.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "7823e55a0581e9a9337ef5142dbda8a3"
+interface-hash: "da3bb318ace37bee849a35c6a66b6cd1"

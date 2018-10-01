@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol AlarmDelegate {
-    func setNotificationWithDate(_ date: Date, onWeekdaysForNotify:[Int], soundName: String, index: Int)
+    func setNotificationWithDate(_ date: Date, onWeekdaysForNotify:[Int], soundName: String, index: Int,method: [Int])
     func setupNotificationSettings() -> UIUserNotificationSettings
     func reSchedule()
     func checkNotification()

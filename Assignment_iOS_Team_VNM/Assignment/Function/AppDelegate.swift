@@ -40,35 +40,73 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
     
     //receive local notification when app in foreground
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
-        
-        //show an alert window
-        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
-        var soundName: String = ""
-        var index: Int = -1
+//        let tictactoe:UIViewController! = AlarmPIC()
+//        showModally(tictactoe)
+        var method:[Int] = []
+         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         if let userInfo = notification.userInfo {
-            soundName = userInfo["soundName"] as! String
-            index = userInfo["index"] as! Int
+//                        soundName = userInfo["soundName"] as! String
+//                        index = userInfo["index"] as! Int
+                        method = userInfo["method"] as! [Int]
+                    }
+        
+        print(method)
+        if method[0] == 1 {
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "alarmpic") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        else if method[0] == 2 {
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        else {
+            let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "math") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
         }
         
-        playSound(soundName)
-        let stopOption = UIAlertAction(title: "OK", style: .default) {
-            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
-            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
-            self.alarmModel = Alarms()
-            //change UI
-            var mainVC = self.window?.visibleViewController as? AlarmVC
-            if mainVC == nil {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? AlarmVC
-            }
-            mainVC!.changeSwitchButtonState(index: index)
-        }
+//        let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "tictactoe") as UIViewController
+//                    self.window = UIWindow(frame: UIScreen.main.bounds)
+//                    self.window?.rootViewController = initialViewController
+//                    self.window?.makeKeyAndVisible()
         
-        storageController.addAction(stopOption)
-        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
+//        //show an alert window
+//        let storageController = UIAlertController(title: "Alarm", message: nil, preferredStyle: .alert)
+//        var soundName: String = ""
+//        var index: Int = -1
+//        if let userInfo = notification.userInfo {
+//            soundName = userInfo["soundName"] as! String
+//            index = userInfo["index"] as! Int
+//        }
+//
+//        //playSound(soundName)
+//        let stopOption = UIAlertAction(title: "OK", style: .default) {
+//            (action:UIAlertAction)->Void in self.audioPlayer?.stop()
+//            AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
+//            self.alarmModel = Alarms()
+//            //change UI
+//            var mainVC = self.window?.visibleViewController as? AlarmVC
+//            if mainVC == nil {
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? AlarmVC
+//            }
+//            mainVC!.changeSwitchButtonState(index: index)
+//        }
+//
+//        storageController.addAction(stopOption)
+//        window?.visibleViewController?.navigationController?.present(storageController, animated: true, completion: nil)
     }
     
-    
+    func showModally(_ viewController: UIViewController) {
+        let window = UIApplication.shared.keyWindow
+        let rootViewController = window?.rootViewController
+        rootViewController?.present(viewController, animated: true, completion: nil)
+    }
     //print out all registed NSNotification for debug
     func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
         
@@ -87,7 +125,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
                                                 AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
         },
                                               nil)
-        let url = URL(fileURLWithPath: Bundle.main.path(forResource: soundName, ofType: "mp3")!)
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: soundName, ofType: ".mp3")!)
         
         var error: NSError?
         

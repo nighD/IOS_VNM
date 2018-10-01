@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import UserNotifications
 
 class AlarmSet : AlarmDelegate
 {
@@ -24,6 +24,7 @@ class AlarmSet : AlarmDelegate
         
         // Specify the notification actions.
         let stopAction = UIMutableUserNotificationAction()
+        //let stop = UNNotificationAction.init(identifier: Id.stopIdentifier, title: "OK", options: )
         stopAction.identifier = Id.stopIdentifier
         stopAction.title = "OK"
         stopAction.activationMode = UIUserNotificationActivationMode.background
@@ -103,7 +104,7 @@ class AlarmSet : AlarmDelegate
         return d
     }
     
-    internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], soundName: String, index: Int) {
+    internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], soundName: String, index: Int,method: [Int]) {
         let AlarmNotification: UILocalNotification = UILocalNotification()
         AlarmNotification.alertBody = "It's time to Wake Up!"
         AlarmNotification.alertAction = "Open App"
@@ -111,7 +112,7 @@ class AlarmSet : AlarmDelegate
         AlarmNotification.soundName = soundName + ".mp3"
         AlarmNotification.timeZone = TimeZone.current
         let repeating: Bool = !weekdays.isEmpty
-        AlarmNotification.userInfo = ["index": index, "soundName": soundName, "repeating" : repeating]
+        AlarmNotification.userInfo = ["index": index, "soundName": soundName, "repeating" : repeating,"method" : method]
         //repeat weekly if repeat weekdays are selected
         //no repeat with
         if !weekdays.isEmpty{
@@ -137,7 +138,7 @@ class AlarmSet : AlarmDelegate
         for i in 0..<alarmModel.count{
             let alarm = alarmModel.alarms[i]
             if alarm.enabled {
-                setNotificationWithDate(alarm.date as Date, onWeekdaysForNotify: alarm.repeatWeekdays, soundName: alarm.mediaLabel, index: i)
+                setNotificationWithDate(alarm.date as Date, onWeekdaysForNotify: alarm.repeatWeekdays, soundName: alarm.mediaLabel, index: i, method: alarm.chooseMethod)
             }
         }
     }

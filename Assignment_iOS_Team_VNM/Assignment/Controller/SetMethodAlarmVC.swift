@@ -12,6 +12,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     @IBOutlet var tableView : UITableView!
     var setTimeAlarmVC: SetTimeAlarmVC!
     var method: [UIImage] = [UIImage(named: "camera")!,UIImage(named:"tictactoe-1")!,UIImage(named:"math")!]
+    var picArray:[String] = ["camera","tictactoe-1","math"]
     var color: [UIColor] = [UIColor .orange,UIColor .blue,UIColor .green]
     var position: [Int] = []
     override func viewDidLoad() {
@@ -30,8 +31,9 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath) as! tableViewCellTableViewCell
         cell.backgroundColor = color[indexPath.item]
-        cell.label.text = ""
-        cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(163)))
+        //cell.label.text = ""
+        cell.image0.image = method[indexPath.item]
+        //cell.label.backgroundColor = UIColor(patternImage: resizeImage(image: method[indexPath.item],newWidth: CGFloat(163)))
         
         return cell
     }
@@ -41,9 +43,10 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
             if indexPath.row == 0 {
                 self.performSegue(withIdentifier: "alarmpicSegue", sender: self)
                 position.append(indexPath.row + 1)
+               // cell.accessoryType
             }
             else {
-                cell.accessoryType = .checkmark
+                //cell.accessoryType = .checkmark
                 position.append(indexPath.row + 1)
                 if position.count >= 1 {
                     position.removeAll()
@@ -101,6 +104,8 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     @IBAction func saveBtn(_ sender: UIButton) {
         setTimeAlarmVC.methodLabel.text = chooseMethod(position: position)
         setTimeAlarmVC.chooseMethod = position
+        print("Position")
+        print(setTimeAlarmVC.chooseMethod)
         self.navigationController?.popViewController(animated: true)
     }
 }

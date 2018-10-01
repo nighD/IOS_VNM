@@ -305,7 +305,7 @@
         <!--MathVC-->
         <scene sceneID="B3Q-Mj-NxI">
             <objects>
-                <viewController storyboardIdentifier="mathIdentifier" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1f-9p-Trj" customClass="MathVC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="math" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B1f-9p-Trj" customClass="MathVC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0VN-Du-BpB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,7 +604,7 @@
         <!--AlarmPIC-->
         <scene sceneID="r12-ut-Sje">
             <objects>
-                <viewController title="AlarmPIC" id="6eH-a3-fYR" customClass="AlarmPIC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="alarmpic" storyboardIdentifier="alarmpic" title="AlarmPIC" id="6eH-a3-fYR" customClass="AlarmPIC" customModule="Assignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kh7-px-7cf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -613,11 +613,6 @@
                                 <rect key="frame" x="0.0" y="30" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Photo Gallery" id="XFD-cB-UWu">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="JaU-rS-2uf">
-                                            <connections>
-                                                <action selector="cancelBtn:" destination="6eH-a3-fYR" id="6cI-Li-RgO"/>
-                                            </connections>
-                                        </barButtonItem>
                                         <rightBarButtonItems>
                                             <barButtonItem title="Save" id="BbA-oE-ao2">
                                                 <connections>
@@ -710,23 +705,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxC-JO-zlH">
-                                                    <rect key="frame" x="125" y="30" width="164" height="140"/>
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-BY-Drj">
+                                                    <rect key="frame" x="87" y="36" width="240" height="128"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="xxC-JO-zlH" firstAttribute="top" secondItem="ABY-DZ-Ro0" secondAttribute="topMargin" constant="19" id="Zd2-69-7Ls"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="xxC-JO-zlH" secondAttribute="bottom" constant="19" id="o7u-4O-jhM"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="xxC-JO-zlH" secondAttribute="trailing" constant="105" id="oiH-53-Ci3"/>
-                                                <constraint firstItem="xxC-JO-zlH" firstAttribute="leading" secondItem="ABY-DZ-Ro0" secondAttribute="leadingMargin" constant="105" id="pG1-xU-90y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fg4-BY-Drj" secondAttribute="trailing" constant="67" id="0n5-Fe-Sor"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fg4-BY-Drj" secondAttribute="bottom" constant="25" id="5qC-M9-d8t"/>
+                                                <constraint firstItem="Fg4-BY-Drj" firstAttribute="top" secondItem="ABY-DZ-Ro0" secondAttribute="topMargin" constant="25" id="WNQ-uB-DIS"/>
+                                                <constraint firstItem="Fg4-BY-Drj" firstAttribute="leading" secondItem="ABY-DZ-Ro0" secondAttribute="leadingMargin" constant="67" id="huZ-8b-9fD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.65860201439999999" blue="0.0073675483369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="label" destination="xxC-JO-zlH" id="Ma5-ZM-YQ6"/>
+                                            <outlet property="image0" destination="Fg4-BY-Drj" id="E4b-l3-pAT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

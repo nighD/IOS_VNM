@@ -127,19 +127,20 @@ class AlarmPIC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         let tap = UITapGestureRecognizer(target: self, action: #selector(takeImage(_:)))
         let longpress = UILongPressGestureRecognizer(target: self, action: #selector(imageLongPressed(_:)))
         cell.image1.image = images[indexPath.item]
-        
-        
+        cell.image1.isUserInteractionEnabled = false
         if indexPath.item == (images.count-1) {
             cell.image1.addGestureRecognizer(tap)
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.white
         }
         else if indexPath.item == 0 {
+            cell.image1.removeGestureRecognizer(tap)
             cell.image1.addGestureRecognizer(longpress)
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.orange
         }
         else {
+            cell.image1.removeGestureRecognizer(tap)
             cell.image1.addGestureRecognizer(longpress)
             cell.image1.isUserInteractionEnabled = true
             cell.backgroundColor = UIColor.orange

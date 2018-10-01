@@ -40,13 +40,26 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let date = AlarmSet.correctSecondComponent(date: datePicker.date)
         let index = segueInfo.curCellIndex
         var tempAlarm = Alarm()
+       
+        if methodLabel.text == "Taking a Picture"{
+            tempAlarm.chooseMethod.append(1)
+        }
+        else if methodLabel.text == "Playing TicTacToe"{
+            tempAlarm.chooseMethod.append(2)
+        }
+        else if methodLabel.text == "Solving math problems"{
+            tempAlarm.chooseMethod.append(3)
+        }
         tempAlarm.date = date
         tempAlarm.label = segueInfo.label
         tempAlarm.enabled = true
         tempAlarm.mediaLabel = segueInfo.mediaLabel
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
-    //    tempAlarm.chooseMethod = segueInfo.chooseMethod
+        //tempAlarm.chooseMethod = segueInfo.chooseMethod
+        
+        
+        print(tempAlarm.chooseMethod)
         tempAlarm.uuid = UUID().uuidString
         if segueInfo.isEditMode {
             alarmModel.alarms[index] = tempAlarm
