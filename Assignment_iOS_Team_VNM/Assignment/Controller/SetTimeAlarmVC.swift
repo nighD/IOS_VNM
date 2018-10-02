@@ -193,6 +193,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
 //        else if segue.identifier == Id.alarmMethodIdentifier {
 //            let dist = segue.destination as! SetMethodAlarmVC
+////            dist.setTimeAlarmVC = self
 //            dist.position = segueInfo.chooseMethod
 //        }
     }

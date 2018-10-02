@@ -42,6 +42,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
         if cell.isSelected {
             if indexPath.row == 0 {
                 self.performSegue(withIdentifier: "alarmpicSegue", sender: self)
+                position.removeAll()
                 position.append(indexPath.row + 1)
                // cell.accessoryType
             }
@@ -105,7 +106,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
 //    }
     
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
-        setTimeAlarmVC.methodLabel.text = chooseMethod(position: position)
+        setTimeAlarmVC.methodLabel.text = SetMethodAlarmVC.chooseMethod(position: position)
         setTimeAlarmVC.chooseMethod = position
         print("Position")
         print(setTimeAlarmVC.chooseMethod)
@@ -114,7 +115,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
 }
 
 extension SetMethodAlarmVC {
-    func chooseMethod(position: [Int]) -> String {
+    static func chooseMethod(position: [Int]) -> String {
         if position.isEmpty {
             return "None"
         }
