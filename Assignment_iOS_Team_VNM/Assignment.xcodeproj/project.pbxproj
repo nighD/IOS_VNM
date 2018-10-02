@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */; };
 		BF1DE8B5215AA8B9003D22A0 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */; };
-		BF1DE8B7215AA8D6003D22A0 /* PropertyReflect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */; };
+		BF1DE8B7215AA8D6003D22A0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B6215AA8D6003D22A0 /* Property.swift */; };
 		BF1DE8B9215AA90A003D22A0 /* SoundDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */; };
 		BF1DE8BB215AA926003D22A0 /* AlarmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */; };
 		BF1DE8BD215AA952003D22A0 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */; };
@@ -66,7 +66,7 @@
 /* Begin PBXFileReference section */
 		BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
 		BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
-		BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyReflect.swift; sourceTree = "<group>"; };
+		BF1DE8B6215AA8D6003D22A0 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDelegate.swift; sourceTree = "<group>"; };
 		BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDelegate.swift; sourceTree = "<group>"; };
 		BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			children = (
 				BF661E60212BA61200D7B6BF /* AppDelegate.swift */,
 				BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */,
-				BF1DE8B6215AA8D6003D22A0 /* PropertyReflect.swift */,
+				BF1DE8B6215AA8D6003D22A0 /* Property.swift */,
 				BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */,
 				BF1DE8BA215AA926003D22A0 /* AlarmDelegate.swift */,
 				BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */,
@@ -436,7 +436,7 @@
 				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
 				BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
-				BF1DE8B7215AA8D6003D22A0 /* PropertyReflect.swift in Sources */,
+				BF1DE8B7215AA8D6003D22A0 /* Property.swift in Sources */,
 				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
 				BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */,

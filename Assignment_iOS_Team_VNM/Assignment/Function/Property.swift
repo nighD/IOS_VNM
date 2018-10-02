@@ -7,7 +7,7 @@
 //
 
 import Foundation
-protocol PropertyReflect{
+protocol Property{
     typealias RepresentationType = [String:Any]
     typealias ValuesType = [Any]
     typealias NamesType = [String]
@@ -21,7 +21,7 @@ protocol PropertyReflect{
 
 
 //default implementation
-extension PropertyReflect{
+extension Property{
     
     var propertyDictRepresentation: RepresentationType {
         var ret: [String:Any] = [:]
