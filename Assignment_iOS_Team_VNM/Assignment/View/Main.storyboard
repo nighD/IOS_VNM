@@ -147,9 +147,29 @@
                                     <!--2018-09-08 15:27:58 +0000-->
                                 </date>
                             </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-x1-kh8">
+                                <rect key="frame" x="0.0" y="372" width="414" height="364"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kDs-D0-xgb" id="SIL-J9-H8X"/>
+                                    <outlet property="delegate" destination="kDs-D0-xgb" id="Zdk-pp-Csw"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1i-QO-81Z">
+                                <rect key="frame" x="82.666666666666686" y="331" width="250" height="20.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="aYC-3o-VdK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnV-ua-ypq">
-                                <rect key="frame" x="18" y="288" width="172" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="82" y="290" width="250" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="POu-nd-1RO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Choose Alarm Method">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -157,34 +177,20 @@
                                     <action selector="chooseMethod:" destination="kDs-D0-xgb" eventType="touchUpInside" id="n7t-9h-ldM"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QGH-x1-kh8">
-                                <rect key="frame" x="0.0" y="321" width="414" height="415"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="kDs-D0-xgb" id="SIL-J9-H8X"/>
-                                    <outlet property="delegate" destination="kDs-D0-xgb" id="Zdk-pp-Csw"/>
-                                </connections>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F1i-QO-81Z">
-                                <rect key="frame" x="333" y="288" width="41" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="4vP-eQ-Qqd"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="top" secondItem="FFN-FL-4om" secondAttribute="top" id="52a-3Z-2he"/>
-                            <constraint firstItem="F1i-QO-81Z" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="8" id="5cf-BL-Kwb"/>
-                            <constraint firstItem="QGH-x1-kh8" firstAttribute="top" secondItem="JnV-ua-ypq" secondAttribute="bottom" id="J59-Yu-2Iu"/>
-                            <constraint firstItem="FFN-FL-4om" firstAttribute="bottom" secondItem="QGH-x1-kh8" secondAttribute="bottom" id="JKV-rB-8xS"/>
-                            <constraint firstItem="JnV-ua-ypq" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="8" id="LrH-3k-AD7"/>
-                            <constraint firstItem="FFN-FL-4om" firstAttribute="trailing" secondItem="F1i-QO-81Z" secondAttribute="trailing" constant="40" id="Nc4-o3-Zxo"/>
-                            <constraint firstItem="QGH-x1-kh8" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="RYJ-2N-KjE"/>
+                            <constraint firstItem="QGH-x1-kh8" firstAttribute="bottom" secondItem="FFN-FL-4om" secondAttribute="bottom" id="IKC-XV-Zfo"/>
+                            <constraint firstItem="JnV-ua-ypq" firstAttribute="centerX" secondItem="n6J-DK-igv" secondAttribute="centerX" id="QXR-1l-ul3"/>
+                            <constraint firstItem="F1i-QO-81Z" firstAttribute="top" secondItem="JnV-ua-ypq" secondAttribute="bottom" constant="8" id="Skc-7V-sfn"/>
+                            <constraint firstItem="QGH-x1-kh8" firstAttribute="trailing" secondItem="FFN-FL-4om" secondAttribute="trailing" id="YjN-XV-sKL"/>
+                            <constraint firstItem="QGH-x1-kh8" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="fq1-HZ-cBt"/>
+                            <constraint firstItem="QGH-x1-kh8" firstAttribute="top" secondItem="F1i-QO-81Z" secondAttribute="bottom" constant="20.666666666666686" id="kdC-uN-LEe"/>
                             <constraint firstItem="f1C-nc-Tub" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="krH-lK-2kD"/>
-                            <constraint firstItem="JnV-ua-ypq" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" constant="18" id="nTY-DW-Ton"/>
-                            <constraint firstItem="QGH-x1-kh8" firstAttribute="leading" secondItem="FFN-FL-4om" secondAttribute="leading" id="qOk-Hh-g0w"/>
+                            <constraint firstItem="F1i-QO-81Z" firstAttribute="centerX" secondItem="n6J-DK-igv" secondAttribute="centerX" id="xut-eK-95m"/>
+                            <constraint firstItem="JnV-ua-ypq" firstAttribute="top" secondItem="f1C-nc-Tub" secondAttribute="bottom" constant="10" id="zz3-nD-Lmv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FFN-FL-4om"/>
                     </view>
@@ -742,7 +748,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Choose Method" id="tvr-kT-tgI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="fca-d0-wgh">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="fca-d0-wgh">
                             <connections>
                                 <action selector="saveBtn:" destination="DYC-ec-o9r" id="bbC-3v-hVf"/>
                             </connections>

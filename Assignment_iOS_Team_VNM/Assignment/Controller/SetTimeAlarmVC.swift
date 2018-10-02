@@ -56,7 +56,6 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         tempAlarm.mediaLabel = segueInfo.mediaLabel
         tempAlarm.mediaID = segueInfo.mediaID
         tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
-        //tempAlarm.chooseMethod = segueInfo.chooseMethod
         
         
         print(tempAlarm.chooseMethod)
