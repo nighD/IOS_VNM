@@ -74,6 +74,7 @@ class AlarmVC: UITableViewController {
             cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: Id.alarmCellIdentifier)
         }
         //cell text
+        cell!.textLabel?.font = UIFont.boldSystemFont(ofSize: 50)
         cell!.selectionStyle = .none
         cell!.tag = indexPath.row
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
@@ -113,7 +114,6 @@ class AlarmVC: UITableViewController {
         if sender.isOn {
             print("switch on")
             alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, soundName: alarmModel.alarms[index].mediaLabel, index: index, method: alarmModel.alarms[index].chooseMethod)
-            print("here:")
             print(alarmModel.alarms[index].chooseMethod)
             tableView.reloadData()
         }

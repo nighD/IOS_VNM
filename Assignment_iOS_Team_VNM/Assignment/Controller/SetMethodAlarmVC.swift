@@ -108,8 +108,6 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
         setTimeAlarmVC.methodLabel.text = SetMethodAlarmVC.chooseMethod(position: position)
         setTimeAlarmVC.chooseMethod = position
-        print("Position")
-        print(setTimeAlarmVC.chooseMethod)
         self.navigationController?.popViewController(animated: true)
     }
 }
