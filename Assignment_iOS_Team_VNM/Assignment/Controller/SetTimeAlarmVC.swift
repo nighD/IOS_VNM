@@ -18,7 +18,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var alarmSet: AlarmDelegate = AlarmSet()
     var alarmModel: Alarms = Alarms()
-    var segueInfo: SegueInfo!
+    var globalVar: GlobalVariable!
     var enabled: Bool!
     var chooseMethod: [Int] = []
     
@@ -38,7 +38,7 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func saveEditAlarm(_ sender: AnyObject) {
         let date = AlarmSet.correctSecondComponent(date: datePicker.date)
-        let index = segueInfo.curCellIndex
+        let index = globalVar.curCellIndex
         var tempAlarm = Alarm()
        
         if methodLabel.text == "Taking a Picture"{
@@ -51,25 +51,25 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             tempAlarm.chooseMethod.append(3)
         }
         tempAlarm.date = date
-        tempAlarm.label = segueInfo.label
+        tempAlarm.label = globalVar.label
         tempAlarm.enabled = true
-        tempAlarm.mediaLabel = segueInfo.mediaLabel
-        tempAlarm.mediaID = segueInfo.mediaID
-        tempAlarm.repeatWeekdays = segueInfo.repeatWeekdays
+        tempAlarm.mediaLabel = globalVar.mediaLabel
+        tempAlarm.mediaID = globalVar.mediaID
+        tempAlarm.repeatWeekdays = globalVar.repeatWeekdays
         tempAlarm.uuid = UUID().uuidString
-        if segueInfo.isEditMode {
+        if globalVar.isEditMode {
             alarmModel.alarms[index] = tempAlarm
         }
         else {
             alarmModel.alarms.append(tempAlarm)
         }
-        self.performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+        self.performSegue(withIdentifier: Identifier.saveSegueIdentifier, sender: self)
     }
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
-        if segueInfo.isEditMode {
+        if globalVar.isEditMode {
             return 2
         }
         else {
@@ -89,26 +89,26 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: Id.settingIdentifier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: Identifier.settingIdentifier)
         if(cell == nil) {
-            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: Id.settingIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: Identifier.settingIdentifier)
         }
         if indexPath.section == 0 {
             
             if indexPath.row == 0 {
                 
                 cell!.textLabel!.text = "Repeat"
-                cell!.detailTextLabel!.text = WeekdaysVC.repeatText(weekdays: segueInfo.repeatWeekdays)
+                cell!.detailTextLabel!.text = WeekdaysVC.repeatText(weekdays: globalVar.repeatWeekdays)
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 1 {
                 cell!.textLabel!.text = "Label"
-                cell!.detailTextLabel!.text = segueInfo.label
+                cell!.detailTextLabel!.text = globalVar.label
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 2 {
                 cell!.textLabel!.text = "Sound"
-                cell!.detailTextLabel!.text = segueInfo.mediaLabel
+                cell!.detailTextLabel!.text = globalVar.mediaLabel
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
 //            else if indexPath.row == 3 {
@@ -127,15 +127,15 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         if indexPath.section == 0 {
             switch indexPath.row{
             case 0:
-                performSegue(withIdentifier: Id.weekdaysSegueIdentifier, sender: self)
+                performSegue(withIdentifier: Identifier.weekdaysSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             case 1:
-                performSegue(withIdentifier: Id.labelSegueIdentifier, sender: self)
+                performSegue(withIdentifier: Identifier.labelSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
             case 2:
-                performSegue(withIdentifier: Id.soundSegueIdentifier, sender: self)
+                performSegue(withIdentifier: Identifier.soundSegueIdentifier, sender: self)
                 cell?.setSelected(true, animated: false)
                 cell?.setSelected(false, animated: false)
 //            case 3:
@@ -148,8 +148,8 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         else if indexPath.section == 1 {
             //delete alarm
-            alarmModel.alarms.remove(at: segueInfo.curCellIndex)
-            performSegue(withIdentifier: Id.saveSegueIdentifier, sender: self)
+            alarmModel.alarms.remove(at: globalVar.curCellIndex)
+            performSegue(withIdentifier: Identifier.saveSegueIdentifier, sender: self)
         }
         
     }
@@ -162,30 +162,30 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == Id.saveSegueIdentifier {
+        if segue.identifier == Identifier.saveSegueIdentifier {
             let dist = segue.destination as! AlarmVC
             let cells = dist.tableView.visibleCells
             for cell in cells {
                 let sw = cell.accessoryView as! UISwitch
-                if sw.tag > segueInfo.curCellIndex
+                if sw.tag > globalVar.curCellIndex
                 {
                     sw.tag -= 1
                 }
             }
             alarmSet.reSchedule()
         }
-        else if segue.identifier == Id.soundSegueIdentifier {
-            let dist = segue.destination as! SoundBrowsingVC
-            dist.mediaID = segueInfo.mediaID
-            dist.mediaLabel = segueInfo.mediaLabel
+        else if segue.identifier == Identifier.soundSegueIdentifier {
+            let vc = segue.destination as! SoundBrowsingVC
+            vc.mediaID = globalVar.mediaID
+            vc.mediaLabel = globalVar.mediaLabel
         }
-        else if segue.identifier == Id.labelSegueIdentifier {
-            let dist = segue.destination as! AlarmNameVC
-            dist.label = segueInfo.label
+        else if segue.identifier == Identifier.labelSegueIdentifier {
+            let vc = segue.destination as! AlarmNameVC
+            vc.label = globalVar.label
         }
-        else if segue.identifier == Id.weekdaysSegueIdentifier {
-            let dist = segue.destination as! WeekdaysVC
-            dist.weekdays = segueInfo.repeatWeekdays
+        else if segue.identifier == Identifier.weekdaysSegueIdentifier {
+            let vc = segue.destination as! WeekdaysVC
+            vc.weekdays = globalVar.repeatWeekdays
         }
 //        else if segue.identifier == Id.alarmMethodIdentifier {
 //            let dist = segue.destination as! SetMethodAlarmVC
@@ -196,18 +196,18 @@ class SetTimeAlarmVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func unwindFromLabelEditView(_ segue: UIStoryboardSegue) {
         let src = segue.source as! AlarmNameVC
-        segueInfo.label = src.label
+        globalVar.label = src.label
     }
     
     @IBAction func unwindFromWeekdaysView(_ segue: UIStoryboardSegue) {
         let src = segue.source as! WeekdaysVC
-        segueInfo.repeatWeekdays = src.weekdays
+        globalVar.repeatWeekdays = src.weekdays
     }
     
     @IBAction func unwindFromMediaView(_ segue: UIStoryboardSegue) {
         let src = segue.source as! SoundBrowsingVC
-        segueInfo.mediaLabel = src.mediaLabel
-        segueInfo.mediaID = src.mediaID
+        globalVar.mediaLabel = src.mediaLabel
+        globalVar.mediaID = src.mediaID
     }
     
 //    @IBAction func unwindFromMethod(_ segue: UIStoryboardSegue) {

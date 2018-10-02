@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */; };
+		BF1DE8B2215A915E003D22A0 /* GlobalVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B1215A915E003D22A0 /* GlobalVariable.swift */; };
 		BF1DE8B5215AA8B9003D22A0 /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */; };
 		BF1DE8B7215AA8D6003D22A0 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B6215AA8D6003D22A0 /* Property.swift */; };
 		BF1DE8B9215AA90A003D22A0 /* SoundDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */; };
@@ -15,8 +15,8 @@
 		BF1DE8BD215AA952003D22A0 /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */; };
 		BF1DE8BF215AA9C4003D22A0 /* AlarmSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */; };
 		BF1DE8C1215AAA32003D22A0 /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C0215AAA32003D22A0 /* Identifier.swift */; };
-		BF1DE8C3215AAAF1003D22A0 /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */; };
-		BF1DE8C5215AAB1B003D22A0 /* NotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */; };
+		BF1DE8C3215AAAF1003D22A0 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C2215AAAF1003D22A0 /* Extension.swift */; };
+		BF1DE8C5215AAB1B003D22A0 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C4215AAB1B003D22A0 /* NotificationExtension.swift */; };
 		BF1DE8C7215AB707003D22A0 /* WeekdaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DE8C6215AB707003D22A0 /* WeekdaysVC.swift */; };
 		BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */; };
 		BF48FE57214CFA2500DA8DB4 /* Correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */; };
@@ -43,7 +43,7 @@
 		E252064B214E891600AF9BCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E252064A214E891600AF9BCE /* Main.storyboard */; };
 		FC68C23E2147AC8F00EAA7C4 /* Apologize.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */; };
 		FC68C2402147ACAA00EAA7C4 /* Let her go - The Passenger.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */; };
-		FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */; };
+		FC68C2422147ACB500EAA7C4 /* Thinking out loud.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC68C2412147ACB400EAA7C4 /* Thinking out loud.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
+		BF1DE8B1215A915E003D22A0 /* GlobalVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVariable.swift; sourceTree = "<group>"; };
 		BF1DE8B4215AA8B9003D22A0 /* Persistable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
 		BF1DE8B6215AA8D6003D22A0 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		BF1DE8B8215AA90A003D22A0 /* SoundDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundDelegate.swift; sourceTree = "<group>"; };
@@ -72,12 +72,11 @@
 		BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
 		BF1DE8BE215AA9C4003D22A0 /* AlarmSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSet.swift; sourceTree = "<group>"; };
 		BF1DE8C0215AAA32003D22A0 /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
-		BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
-		BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+Extension.swift"; sourceTree = "<group>"; };
+		BF1DE8C2215AAAF1003D22A0 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		BF1DE8C4215AAB1B003D22A0 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		BF1DE8C6215AB707003D22A0 /* WeekdaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdaysVC.swift; sourceTree = "<group>"; };
 		BF42B829214CC63D00620BC1 /* TicTacToeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeVC.swift; sourceTree = "<group>"; };
 		BF46C8BE215CEB98006F73D4 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
-		BF46C8BF215CEB98006F73D4 /* tickle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tickle.mp3; sourceTree = "<group>"; };
 		BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Correct.mp3; sourceTree = "<group>"; };
 		BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Wrong.mp3; sourceTree = "<group>"; };
 		BF661E5D212BA61200D7B6BF /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +107,7 @@
 		E252064A214E891600AF9BCE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Apologize.mp3; sourceTree = "<group>"; };
 		FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Let her go - The Passenger.mp3"; sourceTree = "<group>"; };
-		FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud - Ed Sheeran.mp3"; sourceTree = "<group>"; };
+		FC68C2412147ACB400EAA7C4 /* Thinking out loud.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thinking out loud.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +176,8 @@
 				BF661E67212BA61200D7B6BF /* Assets.xcassets */,
 				BF661E69212BA61200D7B6BF /* LaunchScreen.storyboard */,
 				BF661E6C212BA61200D7B6BF /* Info.plist */,
-				BF1DE8C2215AAAF1003D22A0 /* UIWindow+Extension.swift */,
-				BF1DE8C4215AAB1B003D22A0 /* NotificationName+Extension.swift */,
+				BF1DE8C2215AAAF1003D22A0 /* Extension.swift */,
+				BF1DE8C4215AAB1B003D22A0 /* NotificationExtension.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -248,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD61555214975F400A56F25 /* Weekdays.swift */,
-				BF1DE8B1215A915E003D22A0 /* SegueInfo.swift */,
+				BF1DE8B1215A915E003D22A0 /* GlobalVariable.swift */,
 				BF1DE8BC215AA952003D22A0 /* AlarmModel.swift */,
 			);
 			path = Model;
@@ -258,10 +257,9 @@
 			isa = PBXGroup;
 			children = (
 				BF46C8BE215CEB98006F73D4 /* bell.mp3 */,
-				BF46C8BF215CEB98006F73D4 /* tickle.mp3 */,
 				BF48FE58214CFA7100DA8DB4 /* Wrong.mp3 */,
 				BF48FE56214CFA2500DA8DB4 /* Correct.mp3 */,
-				FC68C2412147ACB400EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 */,
+				FC68C2412147ACB400EAA7C4 /* Thinking out loud.mp3 */,
 				FC68C23F2147ACA800EAA7C4 /* Let her go - The Passenger.mp3 */,
 				FC68C23D2147AC8D00EAA7C4 /* Apologize.mp3 */,
 			);
@@ -389,7 +387,7 @@
 				FC68C23E2147AC8F00EAA7C4 /* Apologize.mp3 in Resources */,
 				BF48FE59214CFA7100DA8DB4 /* Wrong.mp3 in Resources */,
 				BF661E68212BA61200D7B6BF /* Assets.xcassets in Resources */,
-				FC68C2422147ACB500EAA7C4 /* Thinking out loud - Ed Sheeran.mp3 in Resources */,
+				FC68C2422147ACB500EAA7C4 /* Thinking out loud.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +419,7 @@
 				BFAF0706214424FE00D42EA8 /* AlarmVC.swift in Sources */,
 				BF1DE8BF215AA9C4003D22A0 /* AlarmSet.swift in Sources */,
 				BF661E99212BAB5500D7B6BF /* ReminderVC.swift in Sources */,
-				BF1DE8C3215AAAF1003D22A0 /* UIWindow+Extension.swift in Sources */,
+				BF1DE8C3215AAAF1003D22A0 /* Extension.swift in Sources */,
 				BF661EA1212BB00800D7B6BF /* SetMethodAlarmVC.swift in Sources */,
 				BF1DE8C7215AB707003D22A0 /* WeekdaysVC.swift in Sources */,
 				BF1DE8C1215AAA32003D22A0 /* Identifier.swift in Sources */,
@@ -432,14 +430,14 @@
 				BF1DE8BD215AA952003D22A0 /* AlarmModel.swift in Sources */,
 				E2367E4D2147867900EC3B4A /* tableViewCellTableViewCell.swift in Sources */,
 				BFD6155A2149768200A56F25 /* SoundBrowsingVC.swift in Sources */,
-				BF1DE8C5215AAB1B003D22A0 /* NotificationName+Extension.swift in Sources */,
+				BF1DE8C5215AAB1B003D22A0 /* NotificationExtension.swift in Sources */,
 				BFD61554214975D000A56F25 /* DayServices.swift in Sources */,
 				BF42B82A214CC63D00620BC1 /* TicTacToeVC.swift in Sources */,
 				BF661E61212BA61200D7B6BF /* AppDelegate.swift in Sources */,
 				BF1DE8B7215AA8D6003D22A0 /* Property.swift in Sources */,
 				BFD61556214975F400A56F25 /* Weekdays.swift in Sources */,
 				BF661E9F212BAFE700D7B6BF /* SetTimeAlarmVC.swift in Sources */,
-				BF1DE8B2215A915E003D22A0 /* SegueInfo.swift in Sources */,
+				BF1DE8B2215A915E003D22A0 /* GlobalVariable.swift in Sources */,
 				BF661EA3212BB9CD00D7B6BF /* MathVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

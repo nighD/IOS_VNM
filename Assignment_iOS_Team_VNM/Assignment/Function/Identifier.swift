@@ -7,8 +7,7 @@
 //
 
 import Foundation
-struct Id {
-    static let stopIdentifier = "Alarm-ios-swift-stop"
+struct Identifier {
     static let addSegueIdentifier = "addSegue"
     static let editSegueIdentifier = "editSegue"
     static let saveSegueIdentifier = "saveEditSegue"

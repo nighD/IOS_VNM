@@ -22,7 +22,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        performSegue(withIdentifier: Id.methodUnwindIdentifier, sender: self)
+        performSegue(withIdentifier: Identifier.methodUnwindIdentifier, sender: self)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

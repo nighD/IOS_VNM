@@ -33,7 +33,7 @@ class AlarmNameVC: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         label = textField.text!
-        performSegue(withIdentifier: Id.labelUnwindIdentifier, sender: self)
+        performSegue(withIdentifier: Identifier.labelUnwindIdentifier, sender: self)
         //This method can be used when no state passing is needed
         //navigationController?.popViewController(animated: true)
         return false
