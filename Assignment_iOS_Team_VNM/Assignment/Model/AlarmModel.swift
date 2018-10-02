@@ -9,7 +9,7 @@
 import Foundation
 import MediaPlayer
 
-struct Alarm: PropertyReflect {
+struct Alarm: Property {
     var date: Date = Date()
     var enabled: Bool = false
     var repeatWeekdays: [Int] = []
@@ -32,7 +32,7 @@ struct Alarm: PropertyReflect {
         self.chooseMethod = chooseMethod
     }
     
-    init(_ dict: PropertyReflect.RepresentationType){
+    init(_ dict: Property.RepresentationType){
         date = dict["date"] as! Date
         enabled = dict["enabled"] as! Bool
         repeatWeekdays = dict["repeatWeekdays"] as! [Int]
@@ -65,7 +65,7 @@ class Alarms: Persistable {
         }
     }
     
-    private func getAlarmsDictRepresentation()->[PropertyReflect.RepresentationType] {
+    private func getAlarmsDictRepresentation()->[Property.RepresentationType] {
         return alarms.map {$0.propertyDictRepresentation}
     }
     
@@ -96,7 +96,7 @@ class Alarms: Persistable {
         guard let alarmArray = array else{
             return [Alarm]()
         }
-        if let dicts = alarmArray as? [PropertyReflect.RepresentationType]{
+        if let dicts = alarmArray as? [Property.RepresentationType]{
             if dicts.first?.count == Alarm.propertyCount {
                 return dicts.map{Alarm($0)}
             }

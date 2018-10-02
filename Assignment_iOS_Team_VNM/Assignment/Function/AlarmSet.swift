@@ -43,7 +43,7 @@ class AlarmSet : AlarmDelegate
         return newNotificationSettings
     }
     
-    private func correctDate(_ date: Date, onWeekdaysForNotify weekdays:[Int]) -> [Date]
+    private func checkDate(_ date: Date, onWeekdaysForNotify weekdays:[Int]) -> [Date]
     {
         var correctedDate: [Date] = [Date]()
         let calendar = Calendar(identifier: Calendar.Identifier.gregorian)
@@ -119,7 +119,7 @@ class AlarmSet : AlarmDelegate
             AlarmNotification.repeatInterval = NSCalendar.Unit.weekOfYear
         }
         
-        let datesForNotification = correctDate(date, onWeekdaysForNotify:weekdays)
+        let datesForNotification = checkDate(date, onWeekdaysForNotify:weekdays)
         
         syncAlarmModel()
         for d in datesForNotification {
@@ -143,7 +143,7 @@ class AlarmSet : AlarmDelegate
         }
     }
     
-    // workaround for some situation that alarm model is not setting properly (when app on background or not launched)
+    // workaround for some situation that alarm model is not setting properly
     func checkNotification() {
         alarmModel = Alarms()
         let notifications = UIApplication.shared.scheduledLocalNotifications
