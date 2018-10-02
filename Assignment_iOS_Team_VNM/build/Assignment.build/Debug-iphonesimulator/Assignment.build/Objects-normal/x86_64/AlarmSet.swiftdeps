@@ -66,9 +66,9 @@ depends-member:
 - !private ["10Assignment13AlarmDelegateP", "UIUserNotificationType"]
 - ["10Assignment13AlarmDelegateP", ""]
 - !private ["10Assignment13AlarmDelegateP", "alarmModel"]
+- !private ["10Assignment13AlarmDelegateP", "checkDate"]
 - ["10Assignment13AlarmDelegateP", "checkNotification"]
 - !private ["10Assignment13AlarmDelegateP", "compare"]
-- !private ["10Assignment13AlarmDelegateP", "correctDate"]
 - !private ["10Assignment13AlarmDelegateP", "correctSecondComponent"]
 - !private ["10Assignment13AlarmDelegateP", "minFireDateWithIndex"]
 - ["10Assignment13AlarmDelegateP", "reSchedule"]
@@ -95,9 +95,9 @@ depends-member:
 - ["10Assignment8AlarmSetC", "UIUserNotificationSettings"]
 - !private ["10Assignment8AlarmSetC", "UIUserNotificationType"]
 - ["10Assignment8AlarmSetC", "alarmModel"]
+- !private ["10Assignment8AlarmSetC", "checkDate"]
 - ["10Assignment8AlarmSetC", "checkNotification"]
 - !private ["10Assignment8AlarmSetC", "compare"]
-- !private ["10Assignment8AlarmSetC", "correctDate"]
 - ["10Assignment8AlarmSetC", "correctSecondComponent"]
 - ["10Assignment8AlarmSetC", "deinit"]
 - ["10Assignment8AlarmSetC", "init"]
@@ -522,11 +522,11 @@ depends-member:
 - !private ["10Assignment11PersistableP", "alarms"]
 - !private ["10Assignment11PersistableP", "count"]
 - ["10Assignment11PersistableP", "init"]
-- !private ["10Assignment15PropertyReflectP", "chooseMethod"]
-- !private ["10Assignment15PropertyReflectP", "date"]
-- !private ["10Assignment15PropertyReflectP", "enabled"]
-- !private ["10Assignment15PropertyReflectP", "mediaLabel"]
-- !private ["10Assignment15PropertyReflectP", "repeatWeekdays"]
+- !private ["10Assignment8PropertyP", "chooseMethod"]
+- !private ["10Assignment8PropertyP", "date"]
+- !private ["10Assignment8PropertyP", "enabled"]
+- !private ["10Assignment8PropertyP", "mediaLabel"]
+- !private ["10Assignment8PropertyP", "repeatWeekdays"]
 - !private ["s22RandomAccessCollectionP", "append"]
 - !private ["s22RandomAccessCollectionP", "date"]
 - !private ["s22RandomAccessCollectionP", "enabled"]
@@ -753,7 +753,7 @@ depends-nominal:
 - !private "s9OptionSetP"
 - !private "So10NSCalendarC7OptionsV"
 - "10Assignment11PersistableP"
-- !private "10Assignment15PropertyReflectP"
+- !private "10Assignment8PropertyP"
 - !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
@@ -826,4 +826,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "38716865e10d1640d354b796e777ec09"
+interface-hash: "0621f346b6b8adce64359eb234bd4cf5"
