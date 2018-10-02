@@ -679,7 +679,6 @@
                     <connections>
                         <outlet property="changeView" destination="BbA-oE-ao2" id="kVf-7i-MzX"/>
                         <outlet property="tableView" destination="geg-El-Pba" id="wRf-7B-gDI"/>
-                        <segue destination="sqG-sZ-9th" kind="show" identifier="saveDone" id="MKJ-Z9-biP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkj-uY-wq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -754,8 +753,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="quj-Fr-SVc" id="8qN-47-lvh"/>
-                        <segue destination="B1f-9p-Trj" kind="show" identifier="mathVC" id="bcu-zK-MwJ"/>
-                        <segue destination="VBR-7V-Odu" kind="show" identifier="tictactoeVC" id="YyM-hQ-drN"/>
                         <segue destination="Vo6-8d-KoJ" kind="unwind" identifier="methodUnwindSegue" unwindAction="unwindFromMethod:" id="b1P-VY-x4X"/>
                         <segue destination="6eH-a3-fYR" kind="show" identifier="alarmpicSegue" id="A8e-yz-TMv"/>
                     </connections>
@@ -1093,6 +1090,6 @@
         <image name="reminder_icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MKJ-Z9-biP"/>
+        <segue reference="p7D-I9-eTP"/>
     </inferredMetricsTieBreakers>
 </document>
