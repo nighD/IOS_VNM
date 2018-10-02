@@ -143,7 +143,7 @@ class AlarmSet : AlarmDelegate
         }
     }
     
-    // workaround for some situation that alarm model is not setting properly (when app on background or not launched)
+    // workaround for some situation that alarm model is not setting properly
     func checkNotification() {
         alarmModel = Alarms()
         let notifications = UIApplication.shared.scheduledLocalNotifications

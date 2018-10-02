@@ -66,6 +66,9 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
             }
         }
     }
+    
+    
+    
 //        let position1 = position[indexPath.item]
 //        if position1 == 0 {
 //            //setTimeAlarmVC.alarmMethod.text = "Compare Picture"
@@ -101,7 +104,7 @@ class SetMethodAlarmVC: UIViewController,UITableViewDelegate, UITableViewDataSou
 //        
 //    }
     
-    @IBAction func saveBtn(_ sender: UIButton) {
+    @IBAction func saveBtn(_ sender: UIBarButtonItem) {
         setTimeAlarmVC.methodLabel.text = chooseMethod(position: position)
         setTimeAlarmVC.chooseMethod = position
         print("Position")
