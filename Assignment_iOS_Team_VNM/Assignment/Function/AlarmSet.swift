@@ -25,7 +25,7 @@ class AlarmSet : AlarmDelegate
         // Specify the notification actions.
         let stopAction = UIMutableUserNotificationAction()
         //let stop = UNNotificationAction.init(identifier: Id.stopIdentifier, title: "OK", options: )
-        stopAction.identifier = Id.stopIdentifier
+//        stopAction.identifier = Id.stopIdentifier
         stopAction.title = "OK"
         stopAction.activationMode = UIUserNotificationActivationMode.background
         stopAction.isDestructive = false

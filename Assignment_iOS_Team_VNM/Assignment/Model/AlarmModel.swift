@@ -21,7 +21,7 @@ struct Alarm: Property {
     
     init(){}
     
-    init(date:Date, enabled:Bool, repeatWeekdays:[Int], uuid:String, mediaID:String, mediaLabel:String, label:String, chooseMethod: [Int]){
+    init(date: Date, enabled: Bool, repeatWeekdays: [Int], uuid: String, mediaID: String, mediaLabel: String, label: String, chooseMethod: [Int], methodLabel: String){
         self.date = date
         self.enabled = enabled
         self.repeatWeekdays = repeatWeekdays

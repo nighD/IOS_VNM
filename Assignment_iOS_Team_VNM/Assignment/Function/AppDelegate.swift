@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
     
     var window: UIWindow?
     var audioPlayer: AVAudioPlayer?
-    let alarmScheduler: AlarmDelegate = AlarmSet()
+    let setAlarm: AlarmDelegate = AlarmSet()
     var alarmModel: Alarms = Alarms()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -50,7 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
                         method = userInfo["method"] as! [Int]
                     }
         
-        print(method)
         if method[0] == 1 {
             let initialViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "alarmpic") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
@@ -176,7 +175,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, So
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         //        audioPlayer?.play()
-        alarmScheduler.checkNotification()
+        setAlarm.checkNotification()
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

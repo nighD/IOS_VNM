@@ -11,7 +11,7 @@ import MediaPlayer
 
 class SoundBrowsingVC: UITableViewController, MPMediaPickerControllerDelegate  {
     
-    fileprivate let numberOfRingtones = 2
+    fileprivate let numberOfRingtones = 100
     var mediaItem: MPMediaItem?
     var mediaLabel: String!
     var mediaID: String!
@@ -21,7 +21,7 @@ class SoundBrowsingVC: UITableViewController, MPMediaPickerControllerDelegate  {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        performSegue(withIdentifier: Id.soundUnwindIdentifier, sender: self)
+        performSegue(withIdentifier: Identifier.soundUnwindIdentifier, sender: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -71,17 +71,20 @@ class SoundBrowsingVC: UITableViewController, MPMediaPickerControllerDelegate  {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: Id.musicIdentifier)
+        var cell = tableView.dequeueReusableCell(withIdentifier: Identifier.musicIdentifier)
         if(cell == nil) {
             cell = UITableViewCell(
-                style: UITableViewCellStyle.default, reuseIdentifier: Id.musicIdentifier)
+                style: UITableViewCellStyle.default, reuseIdentifier: Identifier.musicIdentifier)
         }
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 cell!.textLabel!.text = "bell"
             }
             else if indexPath.row == 1 {
-                cell!.textLabel!.text = "tickle"
+                cell!.textLabel!.text = "Thinking out loud"
+            }
+            else if indexPath.row == 2 {
+                cell!.textLabel!.text = "Apologize"
             }
             
             if cell!.textLabel!.text == mediaLabel {

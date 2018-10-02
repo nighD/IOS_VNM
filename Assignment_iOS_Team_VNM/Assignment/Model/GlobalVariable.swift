@@ -7,13 +7,13 @@
 //
 
 import Foundation
-struct SegueInfo {
-    var curCellIndex: Int
-    var isEditMode: Bool
-    var label: String
-    var mediaLabel: String
-    var mediaID: String
-    var repeatWeekdays: [Int]
+struct GlobalVariable {
     var enabled: Bool
+    var label: String
+    var repeatWeekdays: [Int]
+    var isEditMode: Bool
+    var mediaLabel: String
     var chooseMethod: [Int]
+    var curCellIndex: Int
+    var mediaID: String
 }
