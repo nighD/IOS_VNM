@@ -22,7 +22,7 @@ depends-top-level:
 - !private "DateFormatter"
 - "Int"
 - "Persistable"
-- "PropertyReflect"
+- "Property"
 - "String"
 - "StringLiteralType"
 - "UserDefaults"
@@ -31,7 +31,7 @@ depends-member:
 - ["10Assignment5AlarmV", "Date"]
 - !private ["10Assignment5AlarmV", "DateFormatter"]
 - ["10Assignment5AlarmV", "Int"]
-- ["10Assignment5AlarmV", "PropertyReflect"]
+- ["10Assignment5AlarmV", "Property"]
 - ["10Assignment5AlarmV", "String"]
 - ["10Assignment5AlarmV", "chooseMethod"]
 - ["10Assignment5AlarmV", "date"]
@@ -50,7 +50,7 @@ depends-member:
 - ["10Assignment5AlarmV", "uuid"]
 - ["10Assignment6AlarmsC", "Alarm"]
 - ["10Assignment6AlarmsC", "Int"]
-- ["10Assignment6AlarmsC", "PropertyReflect"]
+- ["10Assignment6AlarmsC", "Property"]
 - ["10Assignment6AlarmsC", "String"]
 - ["10Assignment6AlarmsC", "UserDefaults"]
 - ["10Assignment6AlarmsC", "alarms"]
@@ -259,23 +259,23 @@ depends-member:
 - ["10Assignment11PersistableP", "persistKey"]
 - ["10Assignment11PersistableP", "ud"]
 - ["10Assignment11PersistableP", "unpersist"]
-- ["10Assignment15PropertyReflectP", "Date"]
-- !private ["10Assignment15PropertyReflectP", "DateFormatter"]
-- ["10Assignment15PropertyReflectP", "RepresentationType"]
-- ["10Assignment15PropertyReflectP", ""]
-- !private ["10Assignment15PropertyReflectP", "chooseMethod"]
-- !private ["10Assignment15PropertyReflectP", "date"]
-- !private ["10Assignment15PropertyReflectP", "enabled"]
-- ["10Assignment15PropertyReflectP", "init"]
-- !private ["10Assignment15PropertyReflectP", "label"]
-- !private ["10Assignment15PropertyReflectP", "mediaID"]
-- !private ["10Assignment15PropertyReflectP", "mediaLabel"]
-- ["10Assignment15PropertyReflectP", "propertyCount"]
-- ["10Assignment15PropertyReflectP", "propertyDictRepresentation"]
-- ["10Assignment15PropertyReflectP", "propertyNames"]
-- ["10Assignment15PropertyReflectP", "propertyValues"]
-- !private ["10Assignment15PropertyReflectP", "repeatWeekdays"]
-- !private ["10Assignment15PropertyReflectP", "uuid"]
+- ["10Assignment8PropertyP", "Date"]
+- !private ["10Assignment8PropertyP", "DateFormatter"]
+- ["10Assignment8PropertyP", "RepresentationType"]
+- ["10Assignment8PropertyP", ""]
+- !private ["10Assignment8PropertyP", "chooseMethod"]
+- !private ["10Assignment8PropertyP", "date"]
+- !private ["10Assignment8PropertyP", "enabled"]
+- ["10Assignment8PropertyP", "init"]
+- !private ["10Assignment8PropertyP", "label"]
+- !private ["10Assignment8PropertyP", "mediaID"]
+- !private ["10Assignment8PropertyP", "mediaLabel"]
+- ["10Assignment8PropertyP", "propertyCount"]
+- ["10Assignment8PropertyP", "propertyDictRepresentation"]
+- ["10Assignment8PropertyP", "propertyNames"]
+- ["10Assignment8PropertyP", "propertyValues"]
+- !private ["10Assignment8PropertyP", "repeatWeekdays"]
+- !private ["10Assignment8PropertyP", "uuid"]
 - !private ["s22RandomAccessCollectionP", "count"]
 - !private ["s22RandomAccessCollectionP", "first"]
 - !private ["s22RandomAccessCollectionP", "init"]
@@ -387,7 +387,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So8NSStringC"
 - "10Assignment11PersistableP"
-- "10Assignment15PropertyReflectP"
+- "10Assignment8PropertyP"
 - !private "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
 - "10Foundation20ReferenceConvertibleP"
@@ -443,4 +443,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "b0e456a314085f5870c88c425879d83b"
+interface-hash: "e717b192016c33443cc5dc44bf2b3560"
