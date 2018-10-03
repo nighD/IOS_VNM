@@ -1,16 +1,16 @@
 version: "Apple Swift version 4.1.2 (swiftlang-902.0.54 clang-902.0.39.2)"
 options: "b81c4af93d6f5884e517cd3faedc7d26"
-build_time: [1538451738, 794147000]
+build_time: [1538457581, 318931000]
 inputs:
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/SoundDelegate.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/AlarmPIC.swift": [1538368889, 0]
-  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/NewPicture.swift": [1538303749, 0]
+  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/NewPicture.swift": [1538457581, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/Persistable.swift": [1538303749, 0]
-  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/AlarmVC.swift": [1538381660, 0]
+  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/AlarmVC.swift": [1538453862, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/AlarmSet.swift": [1538451697, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/ReminderVC.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/UIWindow+Extension.swift": [1538303749, 0]
-  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/SetMethodAlarmVC.swift": [1538451697, 0]
+  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/SetMethodAlarmVC.swift": [1538453862, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/WeekdaysVC.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/Identifier.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/NoteVC.swift": [1538303749, 0]
@@ -26,6 +26,6 @@ inputs:
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/AppDelegate.swift": [1538451697, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Function/Property.swift": [1538451697, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Model/Weekdays.swift": [1538303749, 0]
-  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/SetTimeAlarmVC.swift": [1538451697, 0]
+  "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/SetTimeAlarmVC.swift": [1538453862, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Model/SegueInfo.swift": [1538303749, 0]
   "/Users/mac/Desktop/IOS_VNM/Assignment_iOS_Team_VNM/Assignment/Controller/MathVC.swift": [1538303749, 0]

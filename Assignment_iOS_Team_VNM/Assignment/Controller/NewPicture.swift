@@ -22,9 +22,43 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var Back: UIButton!
     @IBOutlet weak var SaveButton: UIButton!
     @IBOutlet weak var Upload: UIButton!
+    var chosenimagesDirectoryPath:String!
+    var chosenpath:[String]!
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView1.image = imageView0
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        // Get the Document directory path
+        let documentDirectorPath:String = paths[0]
+        // Create a new path for the new images folder
+        chosenimagesDirectoryPath = documentDirectorPath + "/chosenPIC"
+        var objcBool:ObjCBool = true
+        let isExist0 = FileManager.default.fileExists(atPath: chosenimagesDirectoryPath, isDirectory: &objcBool)
+        if isExist0 == false {
+            do{
+                try FileManager.default.createDirectory(atPath: chosenimagesDirectoryPath, withIntermediateDirectories: true, attributes: nil)
+            }catch{
+                print("Something went wrong while creating a new folder")
+            }
+        }
+        else {
+            do{
+                
+                chosenpath = try FileManager.default.contentsOfDirectory(atPath: chosenimagesDirectoryPath)
+                for image in chosenpath {
+                    let data = FileManager.default.contents(atPath: chosenimagesDirectoryPath + "/\(image)")
+                    let chosenImage: UIImage!
+                    chosenImage = UIImage(data: data!)
+                    imageView.image = chosenImage
+                }
+                
+                
+                
+            }
+            catch {
+                print("error")
+            }
+        }
+        //imageView1.image = imageView0
         
         // Do any additional setup after loading the view.
     }
@@ -39,7 +73,7 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
         vc.sourceType = .camera
         vc.allowsEditing = true
         vc.delegate = self
-        present(vc, animated: true)
+        present(vc, animated: true,completion: nil)
     }
     @IBAction func back(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -61,7 +95,7 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
               self.present(actionSheet, animated: true, completion: nil)
         }
         else {
-            self.checkImagesComparable()
+            //self.checkImagesComparable()
             self.imagePyramid(Image1: imageView1.image!, Image2: imageView.image!)
         }
         
@@ -74,7 +108,7 @@ class NewPicture: UIViewController,UIImagePickerControllerDelegate, UINavigation
             print("No image found")
             return
         }
-        imageView.image = image
+        imageView1.image = image
     }
     func checkImagesComparable() -> Bool {
         

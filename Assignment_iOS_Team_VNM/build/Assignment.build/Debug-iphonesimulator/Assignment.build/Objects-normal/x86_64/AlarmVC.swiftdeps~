@@ -909,14 +909,14 @@ depends-member:
 - !private ["10Assignment11PersistableP", "alarms"]
 - !private ["10Assignment11PersistableP", "count"]
 - ["10Assignment11PersistableP", "init"]
-- !private ["10Assignment15PropertyReflectP", "chooseMethod"]
-- !private ["10Assignment15PropertyReflectP", "date"]
-- !private ["10Assignment15PropertyReflectP", "enabled"]
-- !private ["10Assignment15PropertyReflectP", "formattedTime"]
-- !private ["10Assignment15PropertyReflectP", "label"]
-- !private ["10Assignment15PropertyReflectP", "mediaID"]
-- !private ["10Assignment15PropertyReflectP", "mediaLabel"]
-- !private ["10Assignment15PropertyReflectP", "repeatWeekdays"]
+- !private ["10Assignment8PropertyP", "chooseMethod"]
+- !private ["10Assignment8PropertyP", "date"]
+- !private ["10Assignment8PropertyP", "enabled"]
+- !private ["10Assignment8PropertyP", "formattedTime"]
+- !private ["10Assignment8PropertyP", "label"]
+- !private ["10Assignment8PropertyP", "mediaID"]
+- !private ["10Assignment8PropertyP", "mediaLabel"]
+- !private ["10Assignment8PropertyP", "repeatWeekdays"]
 - !private ["s22RandomAccessCollectionP", "chooseMethod"]
 - !private ["s22RandomAccessCollectionP", "date"]
 - !private ["s22RandomAccessCollectionP", "enabled"]
@@ -1967,7 +1967,7 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "s9OptionSetP"
 - "10Assignment11PersistableP"
-- !private "10Assignment15PropertyReflectP"
+- !private "10Assignment8PropertyP"
 - !private "s22RandomAccessCollectionP"
 - !private "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
